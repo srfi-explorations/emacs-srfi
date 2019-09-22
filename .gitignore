@@ -1,0 +1,2 @@
+*.elc
+/srfi-data.scm
