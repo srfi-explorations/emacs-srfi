@@ -27,7 +27,7 @@
    (with-current-buffer (get-buffer-create "*SRFI*")
      (cl-assert (null (buffer-file-name)))
      (erase-buffer)
-     (insert "Scheme Requests for Implementation (SRFI)\n\n")
+     (insert "Scheme Requests for Implementation\n\n")
      (dolist (srfi (reverse srfi-data))
        (cl-destructuring-bind (number status title year) srfi
          (insert (format "SRFI %3d: %s (%s)\n" number title
