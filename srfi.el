@@ -48,6 +48,9 @@
   (format "https://github.com/scheme-requests-for-implementation/srfi-%d/"
           srfi-number))
 
+(defun srfi--discussion-url (srfi-number)
+  (format "https://srfi-email.schemers.org/srfi-%d/" srfi-number))
+
 (defun srfi--landing-page-url (srfi-number)
   (format "https://srfi.schemers.org/srfi-%d/"
           srfi-number))
@@ -59,6 +62,10 @@
 (defun srfi-browse-version-control-url ()
   (interactive)
   (browse-url (srfi--version-control-url (srfi--number-on-line))))
+
+(defun srfi-browse-discussion-url ()
+  (interactive)
+  (browse-url (srfi--discussion-url (srfi--number-on-line))))
 
 (defun srfi-browse-landing-page-url ()
   (interactive)
