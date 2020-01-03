@@ -20,7 +20,8 @@
 
 (require 'srfi-data)
 
-(defvar srfi-narrow-query "")
+(defvar srfi-narrow-query ""
+  "The current narrowing text in effect in the *SRFI* buffer.")
 
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current visible line."
