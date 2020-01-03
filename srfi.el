@@ -117,18 +117,18 @@
   (with-current-buffer (get-buffer "*SRFI*")
     (with-selected-window (get-buffer-window (current-buffer))
       (widen)
+      (let ((inhibit-read-only t) (case-fold-search t))
+        (while (< (goto-char (next-single-property-change
+                              (point) 'srfi-number nil (point-max)))
+                  (point-max))
+          (let ((beg (point)) (end (1+ (point-at-eol))))
+            (get-text-property (point) 'srfi-number)
+            (remove-text-properties beg end '(invisible))
+            (unless (looking-at (concat "^.*?" (regexp-quote query)))
+              (put-text-property beg end 'invisible 'srfi-narrow)))))
       (goto-char (point-min))
       (let ((recenter-redisplay nil))
-        (recenter 0)))
-    (let ((inhibit-read-only t) (case-fold-search t))
-      (while (< (goto-char (next-single-property-change
-                            (point) 'srfi-number nil (point-max)))
-                (point-max))
-        (let ((beg (point)) (end (1+ (point-at-eol))))
-          (get-text-property (point) 'srfi-number)
-          (remove-text-properties beg end '(invisible))
-          (unless (looking-at (concat "^.*?" (regexp-quote query)))
-            (put-text-property beg end 'invisible 'srfi-narrow)))))))
+        (recenter 0)))))
 
 (defun srfi--narrow-minibuffer (&rest _ignored)
   "Internal function to narrow the *SRFI* buffer."
