@@ -20,6 +20,17 @@
 
 (require 'srfi-data)
 
+(defconst srfi-mode-font-lock-keywords
+  `(("^SRFI +\\([0-9]+\\): \\(.*?\\) (draft)$"
+     (1 font-lock-keyword-face)
+     (2 font-lock-preprocessor-face))
+    ("^SRFI +\\([0-9]+\\): \\(.*?\\) ([0-9]\\{4\\})$"
+     (1 font-lock-keyword-face)
+     (2 font-lock-function-name-face))
+    ("^SRFI +\\([0-9]+\\): \\(.*?\\) ([0-9]\\{4\\}, withdrawn)$"
+     (1 font-lock-keyword-face)
+     (2 font-lock-comment-face))))
+
 (defvar srfi-narrow-query ""
   "The current narrowing text in effect in the *SRFI* buffer.")
 
@@ -74,7 +85,8 @@
   "Major mode for browsing the SRFI list.
 
 \\{srfi-mode-map}"
-  t)
+  (set (make-local-variable 'font-lock-defaults)
+       '((srfi-mode-font-lock-keywords) nil nil nil nil)))
 
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
 (define-key srfi-mode-map (kbd "r") 'srfi-browse-version-control-url)
