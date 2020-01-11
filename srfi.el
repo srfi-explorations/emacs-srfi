@@ -93,6 +93,28 @@
 (define-key srfi-mode-map (kbd "r") 'srfi-browse-version-control-url)
 (define-key srfi-mode-map (kbd "s") 'srfi)
 
+(defun srfi--narrow (query)
+  "Internal function to narrow the *SRFI* buffer based on QUERY."
+  (with-current-buffer (get-buffer "*SRFI*")
+    (with-selected-window (get-buffer-window (current-buffer))
+      (widen)
+      (let ((inhibit-read-only t) (case-fold-search t))
+        (while (< (goto-char (next-single-property-change
+                              (point) 'srfi-number nil (point-max)))
+                  (point-max))
+          (let ((beg (point)) (end (1+ (point-at-eol))))
+            (get-text-property (point) 'srfi-number)
+            (remove-text-properties beg end '(invisible))
+            (unless (looking-at (concat "^.*?" (regexp-quote query)))
+              (put-text-property beg end 'invisible 'srfi-narrow)))))
+      (goto-char (point-min))
+      (let ((recenter-redisplay nil))
+        (recenter 0)))))
+
+(defun srfi--narrow-minibuffer (&rest _ignored)
+  "Internal function to narrow the *SRFI* buffer."
+  (srfi--narrow (minibuffer-contents)))
+
 (defun srfi--initialize-list ()
   "Internal function to initialize the *SRFI* buffer."
   (with-current-buffer (get-buffer-create "*SRFI*")
@@ -127,28 +149,6 @@
     (with-displayed-buffer-window
      "*SRFI*" (list #'display-buffer-pop-up-window) nil
      (srfi--initialize-list))))
-
-(defun srfi--narrow (query)
-  "Internal function to narrow the *SRFI* buffer based on QUERY."
-  (with-current-buffer (get-buffer "*SRFI*")
-    (with-selected-window (get-buffer-window (current-buffer))
-      (widen)
-      (let ((inhibit-read-only t) (case-fold-search t))
-        (while (< (goto-char (next-single-property-change
-                              (point) 'srfi-number nil (point-max)))
-                  (point-max))
-          (let ((beg (point)) (end (1+ (point-at-eol))))
-            (get-text-property (point) 'srfi-number)
-            (remove-text-properties beg end '(invisible))
-            (unless (looking-at (concat "^.*?" (regexp-quote query)))
-              (put-text-property beg end 'invisible 'srfi-narrow)))))
-      (goto-char (point-min))
-      (let ((recenter-redisplay nil))
-        (recenter 0)))))
-
-(defun srfi--narrow-minibuffer (&rest _ignored)
-  "Internal function to narrow the *SRFI* buffer."
-  (srfi--narrow (minibuffer-contents)))
 
 (defun srfi ()
   "Show the *SRFI* buffer and live-narrow it from the minibuffer."
