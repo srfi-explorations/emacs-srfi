@@ -20,11 +20,14 @@
 
 (defun srfi-data-convert--write-all (srfis)
   (with-temp-buffer
-    (insert ";;; Automatically converted from srfi-data.scm.\n")
-    (mapc (lambda (form) (insert (format "%S\n" form)))
-          `((defconst srfi-data ',srfis
-                      "Table of all known SRFI documents.")
-            (provide 'srfi-data)))
+    (insert ";;; Automatically converted from srfi-data.scm.\n\n")
+    (insert "(defconst srfi-data\n")
+    (insert "  '(\n")
+    (mapc (lambda (srfi) (insert (format "    %S\n" srfi)))
+          srfis)
+    (insert "    )\n")
+    (insert "  \"Table of all known SRFI documents.\")\n\n")
+    (insert "(provide 'srfi-data)\n")
     (write-region nil nil "srfi-data.el")))
 
 (defun srfi-data-convert ()
