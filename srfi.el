@@ -88,9 +88,10 @@
   (set (make-local-variable 'font-lock-defaults)
        '((srfi-mode-font-lock-keywords) nil nil nil nil)))
 
+(define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
 (define-key srfi-mode-map (kbd "r") 'srfi-browse-version-control-url)
-(define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
+(define-key srfi-mode-map (kbd "s") 'srfi)
 
 (defun srfi--initialize-list ()
   "Internal function to initialize the *SRFI* buffer."
@@ -102,7 +103,10 @@
       (insert
        "Scheme Requests for Implementation\n"
        "\n"
-       "RET - browse SRFI document, r - browse repo, d - browse discussion\n"
+       "RET - browse SRFI document, "
+       "r - repo, "
+       "d - discussion, "
+       "s - search\n"
        "\n")
       (dolist (srfi (reverse srfi-data))
         (cl-destructuring-bind (number status title year) srfi
