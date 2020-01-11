@@ -85,8 +85,9 @@
   "Major mode for browsing the SRFI list.
 
 \\{srfi-mode-map}"
-  (set (make-local-variable 'font-lock-defaults)
-       '((srfi-mode-font-lock-keywords) nil nil nil nil)))
+  (setq-local revert-buffer-function 'srfi-revert)
+  (setq-local font-lock-defaults
+              '((srfi-mode-font-lock-keywords) nil nil nil nil)))
 
 (define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
@@ -115,8 +116,8 @@
   "Internal function to narrow the *SRFI* buffer."
   (srfi--narrow (minibuffer-contents)))
 
-(defun srfi--initialize-list ()
-  "Internal function to initialize the *SRFI* buffer."
+(defun srfi-revert (&optional _arg _noconfirm)
+  "(Re-)initialize the *SRFI* buffer."
   (with-current-buffer (get-buffer-create "*SRFI*")
     (cl-assert (null (buffer-file-name)))
     (let ((inhibit-read-only t))
@@ -139,22 +140,22 @@
                               ((withdrawn) (format "%S, withdrawn" year))
                               (t status))))
             (let ((end (point)))
-              (put-text-property beg end 'srfi-number number))))))))
+              (put-text-property beg end 'srfi-number number))))))
+    (srfi--narrow srfi-narrow-query)))
 
 (defun srfi-list ()
   "Show the *SRFI* buffer."
   (interactive)
   (if (eq (current-buffer) (get-buffer "*SRFI*"))
-      (srfi--initialize-list)
+      (srfi-revert)
     (with-displayed-buffer-window
      "*SRFI*" (list #'display-buffer-pop-up-window) nil
-     (srfi--initialize-list))))
+     (srfi-revert))))
 
 (defun srfi ()
   "Show the *SRFI* buffer and live-narrow it from the minibuffer."
   (interactive)
   (srfi-list)
-  (srfi--narrow srfi-narrow-query)
   (minibuffer-with-setup-hook
       (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
                            nil 'local))
