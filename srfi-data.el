@@ -181,6 +181,8 @@
     (176 draft "Version flag" nil)
     (177 draft "Portable keyword arguments" nil)
     (178 draft "Bitvector library" nil)
+    (179 draft "Nonempty Intervals and Generalized Arrays (Updated)" nil)
+    (180 draft "JSON" nil)
     )
   "Table of all known SRFI documents.")
 
