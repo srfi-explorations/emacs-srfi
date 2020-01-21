@@ -81,6 +81,11 @@
   (interactive)
   (browse-url (srfi--document-url (srfi--number-on-line))))
 
+(defun srfi-browse-website ()
+  "Browse the home page of the SRFI specification process."
+  (interactive)
+  (browse-url "https://srfi.schemers.org/"))
+
 (define-derived-mode srfi-mode special-mode "SRFI"
   "Major mode for browsing the SRFI list.
 
@@ -93,6 +98,7 @@
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
 (define-key srfi-mode-map (kbd "r") 'srfi-browse-version-control-url)
 (define-key srfi-mode-map (kbd "s") 'srfi)
+(define-key srfi-mode-map (kbd "w") 'srfi-browse-website)
 
 (defun srfi--narrow (query)
   "Internal function to narrow the *SRFI* buffer based on QUERY."
@@ -126,10 +132,11 @@
       (insert
        "Scheme Requests for Implementation\n"
        "\n"
-       "RET - browse SRFI document, "
-       "r - repo, "
-       "d - discussion, "
-       "s - search\n"
+       "RET: browse SRFI document, "
+       "r: repo, "
+       "d: discussion, "
+       "s: search, "
+       "w: website\n"
        "\n")
       (dolist (srfi (reverse srfi-data))
         (cl-destructuring-bind (number status title year) srfi
