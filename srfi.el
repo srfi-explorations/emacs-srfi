@@ -42,7 +42,7 @@
     (or (get-text-property (point) 'srfi-number)
         (error "No SRFI on this line"))))
 
-(defun srfi--version-control-url (srfi-number)
+(defun srfi--repository-url (srfi-number)
   "Get the web URL for the version control repository of SRFI-NUMBER."
   (format "https://github.com/scheme-requests-for-implementation/srfi-%d/"
           srfi-number))
@@ -61,10 +61,10 @@
   (format "https://srfi.schemers.org/srfi-%d/srfi-%d.html"
           srfi-number srfi-number))
 
-(defun srfi-browse-version-control-url ()
+(defun srfi-browse-repository-url ()
   "Browse version control repository of the SRFI on the current line."
   (interactive)
-  (browse-url (srfi--version-control-url (srfi--number-on-line))))
+  (browse-url (srfi--repository-url (srfi--number-on-line))))
 
 (defun srfi-browse-discussion-url ()
   "Browse mailing list archive of the SRFI on the current line."
@@ -96,7 +96,7 @@
 
 (define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
-(define-key srfi-mode-map (kbd "r") 'srfi-browse-version-control-url)
+(define-key srfi-mode-map (kbd "r") 'srfi-browse-repository-url)
 (define-key srfi-mode-map (kbd "s") 'srfi)
 (define-key srfi-mode-map (kbd "w") 'srfi-browse-website)
 
