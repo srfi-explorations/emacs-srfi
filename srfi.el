@@ -132,10 +132,10 @@
       (insert
        "Scheme Requests for Implementation\n"
        "\n"
-       "RET: browse SRFI document, "
-       "r: repo, "
-       "d: discussion, "
-       "s: search, "
+       "RET: browse SRFI document | "
+       "r: repo | "
+       "d: discussion | "
+       "s: search | "
        "w: website\n"
        "\n")
       (dolist (srfi (reverse srfi-data))
