@@ -44,7 +44,7 @@
 
 (defun srfi--repository-url (srfi-number)
   "Get the web URL for the version control repository of SRFI-NUMBER."
-  (format "https://github.com/scheme-requests-for-implementation/srfi-%d/"
+  (format "https://github.com/scheme-requests-for-implementation/srfi-%d"
           srfi-number))
 
 (defun srfi--discussion-url (srfi-number)
