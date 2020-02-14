@@ -138,9 +138,13 @@
        "s: search | "
        "w: website\n"
        "\n")
-      (dolist (srfi (reverse srfi-data))
-        (cl-destructuring-bind (number status title year) srfi
-          (let ((beg (point)))
+      (let ((count (truncate (length srfi-data) 3)))
+        (dotimes (i count)
+          (let* ((number (- count 1 i))
+                 (year   (elt srfi-data (+ 0 (* 3 number))))
+                 (status (elt srfi-data (+ 1 (* 3 number))))
+                 (title  (elt srfi-data (+ 2 (* 3 number))))
+                 (beg    (point)))
             (insert (format "SRFI %3d: %s (%s)\n" number title
                             (cl-case status
                               ((final) year)
