@@ -28,10 +28,10 @@
     (insert "  [\n")
     (mapc (lambda (srfi)
             (cl-destructuring-bind (number year status title) srfi
-              (insert (format "    ;; SRFI %d\n" number))
-              (insert (format "    %S %S %S\n" year status title))))
+              (insert (format "   ;; SRFI %d\n" number))
+              (insert (format "   %S %S %S\n" year status title))))
           srfis)
-    (insert "  ]\n")
+    (insert "   ]\n")
     (insert "  \"Table of all known SRFI documents.\")\n\n")
     (insert "(provide 'srfi-data)\n")
     (write-region nil nil "srfi-data.el")))
