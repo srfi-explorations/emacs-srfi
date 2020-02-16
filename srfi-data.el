@@ -364,6 +364,8 @@
     nil draft "Nonempty Intervals and Generalized Arrays (Updated)"
     ;; SRFI 180
     nil draft "JSON"
+    ;; SRFI 181
+    nil draft "Custom ports"
   ]
   "Table of all known SRFI documents.")
 
