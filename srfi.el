@@ -133,8 +133,8 @@
        "Scheme Requests for Implementation\n"
        "\n"
        "RET: browse SRFI document | "
-       "r: repo | "
        "d: discussion | "
+       "r: repo | "
        "s: search | "
        "w: website\n"
        "\n")
