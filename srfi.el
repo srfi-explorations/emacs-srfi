@@ -92,7 +92,10 @@
 \\{srfi-mode-map}"
   (setq-local revert-buffer-function 'srfi-revert)
   (setq-local font-lock-defaults
-              '((srfi-mode-font-lock-keywords) nil nil nil nil)))
+              '((srfi-mode-font-lock-keywords) nil nil nil nil))
+  (unless (equal (buffer-name) "*SRFI*")
+    (message (concat "Note: srfi-mode is only meant for the *SRFI* buffer. "
+                     "Try M-x srfi."))))
 
 (define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
 (define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
