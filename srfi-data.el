@@ -372,6 +372,8 @@
    nil draft "Another format procedure, Fox"
    ;; SRFI 184
    nil draft "define-record-lambda"
+   ;; SRFI 185
+   nil draft "Linear adjustable-size strings"
    ]
   "Table of all known SRFI documents.")
 
