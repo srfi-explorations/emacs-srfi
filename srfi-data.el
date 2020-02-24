@@ -355,7 +355,7 @@
    ;; SRFI 175
    2019 final "ASCII character library"
    ;; SRFI 176
-   nil draft "Version flag"
+   2020 final "Version flag"
    ;; SRFI 177
    nil draft "Portable keyword arguments"
    ;; SRFI 178
@@ -366,6 +366,12 @@
    nil draft "JSON"
    ;; SRFI 181
    nil draft "Custom ports"
+   ;; SRFI 182
+   nil draft "ADBMAL, ALET, and ALET*"
+   ;; SRFI 183
+   nil draft "Another format procedure, Fox"
+   ;; SRFI 184
+   nil draft "define-record-lambda"
    ]
   "Table of all known SRFI documents.")
 
