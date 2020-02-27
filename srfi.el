@@ -158,6 +158,7 @@
               (put-text-property beg end 'srfi-number number))))))
     (srfi--narrow srfi-narrow-query)))
 
+;;;###autoload
 (defun srfi-list ()
   "Show the *SRFI* buffer."
   (interactive)
@@ -167,6 +168,7 @@
      "*SRFI*" (list #'display-buffer-pop-up-window) nil
      (srfi-revert))))
 
+;;;###autoload
 (defun srfi ()
   "Show the *SRFI* buffer and live-narrow it from the minibuffer."
   (interactive)
