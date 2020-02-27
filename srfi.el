@@ -3,7 +3,7 @@
 ;; SPDX-FileCopyrightText: 2019 Lassi Kortela
 ;; SPDX-License-Identifier: MIT
 ;; Author: Lassi Kortela <lassi@lassi.io>
-;; URL: https://github.com/lassik/emacs-srfi
+;; URL: https://github.com/srfi-explorations/emacs-srfi
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1") (cl-lib "0.5"))
 ;; Keywords: languages util
