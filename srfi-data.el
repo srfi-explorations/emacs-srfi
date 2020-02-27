@@ -1,4 +1,10 @@
-;;; Automatically converted from srfi-data.scm.
+;;; srfi-data.el --- Scheme Requests for Implementation database -*- lexical-binding: t -*-
+;;
+;;; Commentary:
+;;
+;; Automatically converted from srfi-data.scm.
+;;
+;;; Code:
 
 (defconst srfi-data
   [
@@ -378,3 +384,5 @@
   "Table of all known SRFI documents.")
 
 (provide 'srfi-data)
+
+;;; srfi-data.el ends here

@@ -23,17 +23,29 @@
 
 (defun srfi-data-convert--write-all (srfis)
   (with-temp-buffer
-    (insert ";;; Automatically converted from srfi-data.scm.\n\n")
-    (insert "(defconst srfi-data\n")
-    (insert "  [\n")
+    (insert
+     ";;; srfi-data.el --- Scheme Requests for Implementation database"
+     " -*- lexical-binding: t -*-" "\n"
+     ";;" "\n"
+     ";;; Commentary:" "\n"
+     ";;" "\n"
+     ";; Automatically converted from srfi-data.scm." "\n"
+     ";;" "\n"
+     ";;; Code:" "\n"
+     "\n"
+     "(defconst srfi-data" "\n"
+     "  [\n")
     (mapc (lambda (srfi)
             (cl-destructuring-bind (number year status title) srfi
-              (insert (format "   ;; SRFI %d\n" number))
-              (insert (format "   %S %S %S\n" year status title))))
+              (insert (format "   ;; SRFI %d\n" number)
+                      (format "   %S %S %S\n" year status title))))
           srfis)
-    (insert "   ]\n")
-    (insert "  \"Table of all known SRFI documents.\")\n\n")
-    (insert "(provide 'srfi-data)\n")
+    (insert "   ]" "\n"
+            "  \"Table of all known SRFI documents.\")" "\n"
+            "\n"
+            "(provide 'srfi-data)" "\n"
+            "\n"
+            ";;; srfi-data.el ends here" "\n")
     (write-region nil nil "srfi-data.el")))
 
 (defun srfi-data-convert ()
