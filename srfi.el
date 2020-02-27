@@ -1,6 +1,6 @@
 ;;; srfi.el --- Scheme Requests for Implementation
 ;;
-;; SPDX-FileCopyrightText: 2019 Lassi Kortela
+;; Copyright 2019, 2020 Lassi Kortela
 ;; SPDX-License-Identifier: MIT
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/srfi-explorations/emacs-srfi
