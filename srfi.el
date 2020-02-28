@@ -21,9 +21,9 @@
 ;;   typing numbers or words into the minibuffer.
 ;;
 ;; * The *SRFI* buffer provides one-key commands to visit the SRFI
-;;   document, its discussion archive (mailing list archive), and it
-;;   version control repository. These commands open the right web
-;;   pages in your web browser using `browse-url'.
+;;   document, its discussion archive (mailing list), and its version
+;;   control repository. These commands open the right web pages in
+;;   your web browser using `browse-url'.
 ;;
 ;;; Code:
 
