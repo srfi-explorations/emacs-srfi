@@ -1,4 +1,4 @@
-;;; srfi.el --- Scheme Requests for Implementation
+;;; srfi.el --- Scheme Requests for Implementation -*- lexical-binding: t -*-
 ;;
 ;; Copyright 2019, 2020 Lassi Kortela
 ;; SPDX-License-Identifier: MIT
