@@ -53,6 +53,11 @@
     (or (get-text-property (point) 'srfi-number)
         (error "No SRFI on this line"))))
 
+(defun srfi--goto-first-srfi ()
+  "Go to line of first visible SRFI."
+  (goto-char (next-single-property-change
+              (point-min) 'srfi-number nil (point-max))))
+
 (defun srfi--repository-url (srfi-number)
   "Get the web URL for the version control repository of SRFI-NUMBER."
   (format "https://github.com/scheme-requests-for-implementation/srfi-%d"
@@ -131,7 +136,8 @@
               (put-text-property beg end 'invisible 'srfi-narrow)))))
       (goto-char (point-min))
       (let ((recenter-redisplay nil))
-        (recenter 0)))))
+        (recenter 0))
+      (srfi--goto-first-srfi))))
 
 (defun srfi--narrow-minibuffer (&rest _ignored)
   "Internal function to narrow the *SRFI* buffer."
@@ -190,9 +196,7 @@
                            nil 'local))
     (setq srfi-narrow-query (read-string "SRFI: " srfi-narrow-query)))
   (unless (eq (current-buffer) (get-buffer "*SRFI*"))
-    (switch-to-buffer-other-window "*SRFI*"))
-  (goto-char (next-single-property-change
-              (point-min) 'srfi-number nil (point-max))))
+    (switch-to-buffer-other-window "*SRFI*")))
 
 (provide 'srfi)
 
