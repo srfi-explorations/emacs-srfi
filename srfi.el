@@ -120,6 +120,7 @@
     (with-selected-window (get-buffer-window (current-buffer))
       (widen)
       (let ((inhibit-read-only t) (case-fold-search t))
+        (goto-char (point-min))
         (while (< (goto-char (next-single-property-change
                               (point) 'srfi-number nil (point-max)))
                   (point-max))
