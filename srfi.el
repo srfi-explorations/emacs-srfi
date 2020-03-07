@@ -111,7 +111,7 @@
     (define-key map (kbd "s") 'srfi)
     (define-key map (kbd "w") 'srfi-browse-website)
     map)
-  "Keymap for `magit-reflog-mode'.")
+  "Keymap for `srfi-mode'.")
 
 (define-derived-mode srfi-mode special-mode "SRFI"
   "Major mode for browsing the SRFI list.
