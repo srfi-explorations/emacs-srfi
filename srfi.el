@@ -102,6 +102,17 @@
   (interactive)
   (browse-url "https://srfi.schemers.org/"))
 
+(defvar srfi-mode-map
+  (let ((map (make-sparse-keymap)))
+    (set-keymap-parent map special-mode-map)
+    (define-key map (kbd "RET") 'srfi-browse-url)
+    (define-key map (kbd "d") 'srfi-browse-discussion-url)
+    (define-key map (kbd "r") 'srfi-browse-repository-url)
+    (define-key map (kbd "s") 'srfi)
+    (define-key map (kbd "w") 'srfi-browse-website)
+    map)
+  "Keymap for `magit-reflog-mode'.")
+
 (define-derived-mode srfi-mode special-mode "SRFI"
   "Major mode for browsing the SRFI list.
 
@@ -112,12 +123,6 @@
   (unless (equal (buffer-name) "*SRFI*")
     (message (concat "Note: srfi-mode is only meant for the *SRFI* buffer. "
                      "Try M-x srfi."))))
-
-(define-key srfi-mode-map (kbd "RET") 'srfi-browse-url)
-(define-key srfi-mode-map (kbd "d") 'srfi-browse-discussion-url)
-(define-key srfi-mode-map (kbd "r") 'srfi-browse-repository-url)
-(define-key srfi-mode-map (kbd "s") 'srfi)
-(define-key srfi-mode-map (kbd "w") 'srfi-browse-website)
 
 (defun srfi--narrow (query)
   "Internal function to narrow the *SRFI* buffer based on QUERY."
