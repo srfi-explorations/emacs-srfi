@@ -180,11 +180,9 @@
 (defun srfi-list ()
   "Show the *SRFI* buffer."
   (interactive)
-  (if (eq (current-buffer) (get-buffer "*SRFI*"))
-      (srfi-revert)
-    (with-displayed-buffer-window
-     "*SRFI*" (list #'display-buffer-pop-up-window) nil
-     (srfi-revert))))
+  (unless (eq (current-buffer) (get-buffer "*SRFI*"))
+    (switch-to-buffer-other-window "*SRFI*"))
+  (srfi-revert))
 
 ;;;###autoload
 (defun srfi ()
@@ -194,9 +192,7 @@
   (minibuffer-with-setup-hook
       (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
                            nil 'local))
-    (setq srfi-narrow-query (read-string "SRFI: " srfi-narrow-query)))
-  (unless (eq (current-buffer) (get-buffer "*SRFI*"))
-    (switch-to-buffer-other-window "*SRFI*")))
+    (setq srfi-narrow-query (read-string "SRFI: " srfi-narrow-query))))
 
 (provide 'srfi)
 
