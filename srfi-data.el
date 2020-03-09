@@ -380,6 +380,8 @@
    nil draft "define-record-lambda"
    ;; SRFI 185
    nil draft "Linear adjustable-size strings"
+   ;; SRFI 186
+   nil draft "Transcoders and transcoded ports"
    ]
   "Table of all known SRFI documents.")
 
