@@ -382,6 +382,8 @@
    nil draft "Linear adjustable-size strings"
    ;; SRFI 186
    nil draft "Transcoders and transcoded ports"
+   ;; SRFI 187
+   nil draft "ALAMBDA and ADEFINE"
    ]
   "Table of all known SRFI documents.")
 
