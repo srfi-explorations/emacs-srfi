@@ -1,3 +1,6 @@
+;; Copyright 2019, 2020 Lassi Kortela
+;; SPDX-License-Identifier: MIT
+
 (defun srfi-data-convert--read-all ()
   (with-temp-buffer
     (insert-file-contents "srfi-data.scm")
