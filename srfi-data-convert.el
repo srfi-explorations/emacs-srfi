@@ -40,7 +40,7 @@
             "(provide 'srfi-data)" "\n"
             "\n"
             ";;; srfi-data.el ends here" "\n")
-    (write-region nil nil "srfi-data.el")))
+    (write-region nil nil "srfi-data.el.new")))
 
 (defun srfi-data-convert ()
   (interactive)
