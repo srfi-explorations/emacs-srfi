@@ -1,5 +1,8 @@
 ;;; srfi-data.el --- Scheme Requests for Implementation database -*- lexical-binding: t -*-
 ;;
+;; Copyright 1998-2020 srfi.schemers.org
+;; SPDX-License-Identifier: MIT
+;;
 ;;; Commentary:
 ;;
 ;; Automatically converted from srfi-data.scm.
