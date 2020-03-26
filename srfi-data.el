@@ -387,6 +387,8 @@
    nil draft "Transcoders and transcoded ports"
    ;; SRFI 187
    nil draft "ALAMBDA and ADEFINE"
+   ;; SRFI 188
+   nil draft "Splicing binding constructs for syntactic keywords"
    ]
   "Table of all known SRFI documents.")
 
