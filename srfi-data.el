@@ -376,19 +376,21 @@
    ;; SRFI 181
    nil draft "Custom ports"
    ;; SRFI 182
-   nil draft "ADBMAL, ALET, and ALET*"
+   2020 withdrawn "ADBMAL, ALET, and ALET*"
    ;; SRFI 183
-   nil draft "Another format procedure, Fox"
+   2020 withdrawn "Another format procedure, Fox"
    ;; SRFI 184
-   nil draft "define-record-lambda"
+   2020 withdrawn "define-record-lambda"
    ;; SRFI 185
    nil draft "Linear adjustable-size strings"
    ;; SRFI 186
    nil draft "Transcoders and transcoded ports"
    ;; SRFI 187
-   nil draft "ALAMBDA and ADEFINE"
+   2020 withdrawn "ALAMBDA and ADEFINE"
    ;; SRFI 188
    nil draft "Splicing binding constructs for syntactic keywords"
+   ;; SRFI 189
+   nil draft "Maybe and Either: optional container types"
    ]
   "Table of all known SRFI documents.")
 
