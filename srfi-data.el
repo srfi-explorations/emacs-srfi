@@ -391,6 +391,8 @@
    nil draft "Splicing binding constructs for syntactic keywords"
    ;; SRFI 189
    nil draft "Maybe and Either: optional container types"
+   ;; SRFI 190
+   nil draft "Coroutine Generators"
    ]
   "Table of all known SRFI documents.")
 
