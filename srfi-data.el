@@ -393,6 +393,8 @@
    nil draft "Maybe and Either: optional container types"
    ;; SRFI 190
    nil draft "Coroutine Generators"
+   ;; SRFI 191
+   nil draft "Procedure Arity Inspection"
    ]
   "Table of all known SRFI documents.")
 
