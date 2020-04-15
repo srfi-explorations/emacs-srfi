@@ -395,6 +395,8 @@
    nil draft "Coroutine Generators"
    ;; SRFI 191
    nil draft "Procedure Arity Inspection"
+   ;; SRFI 192
+   nil draft "Port Positioning"
    ]
   "Table of all known SRFI documents.")
 
