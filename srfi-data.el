@@ -382,7 +382,7 @@
    ;; SRFI 184
    2020 withdrawn "define-record-lambda"
    ;; SRFI 185
-   nil draft "Linear adjustable-size strings"
+   nil draft "Linear adjustable-length strings"
    ;; SRFI 186
    nil draft "Transcoders and transcoded ports"
    ;; SRFI 187
@@ -397,6 +397,8 @@
    nil draft "Procedure Arity Inspection"
    ;; SRFI 192
    nil draft "Port Positioning"
+   ;; SRFI 193
+   nil draft "Command lines"
    ]
   "Table of all known SRFI documents.")
 
