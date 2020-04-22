@@ -109,6 +109,7 @@
     (define-key map (kbd "d") 'srfi-browse-discussion-url)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
+    (define-key map (kbd "S") 'srfi-fresh-search)
     (define-key map (kbd "w") 'srfi-browse-website)
     map)
   "Keymap for `srfi-mode'.")
@@ -198,6 +199,12 @@
       (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
                            nil 'local))
     (setq srfi-narrow-query (read-string "SRFI: " srfi-narrow-query))))
+
+(defun srfi-fresh-search ()
+  "Show the *SRFI* buffer and live-narrow it from scratch."
+  (interactive)
+  (setq srfi-narrow-query "")
+  (srfi))
 
 (provide 'srfi)
 
