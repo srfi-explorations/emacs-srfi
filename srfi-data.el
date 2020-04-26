@@ -382,7 +382,7 @@
    ;; SRFI 184
    2020 withdrawn "define-record-lambda"
    ;; SRFI 185
-   nil draft "Linear adjustable-length strings"
+   2020 final "Linear adjustable-length strings"
    ;; SRFI 186
    nil draft "Transcoders and transcoded ports"
    ;; SRFI 187
