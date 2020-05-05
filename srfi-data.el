@@ -399,6 +399,10 @@
    nil draft "Port Positioning"
    ;; SRFI 193
    nil draft "Command lines"
+   ;; SRFI 194
+   nil draft "Random data generators"
+   ;; SRFI 195
+   nil draft "Multiple-value boxes"
    ]
   "Table of all known SRFI documents.")
 
