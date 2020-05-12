@@ -384,7 +384,7 @@
    ;; SRFI 185
    2020 final "Linear adjustable-length strings"
    ;; SRFI 186
-   nil draft "Transcoders and transcoded ports"
+   2020 final "Transcoders and transcoded ports"
    ;; SRFI 187
    2020 withdrawn "ALAMBDA and ADEFINE"
    ;; SRFI 188
