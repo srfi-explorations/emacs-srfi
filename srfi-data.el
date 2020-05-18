@@ -403,6 +403,8 @@
    nil draft "Random data generators"
    ;; SRFI 195
    nil draft "Multiple-value boxes"
+   ;; SRFI 196
+   nil draft "Range Objects"
    ]
   "Table of all known SRFI documents.")
 
