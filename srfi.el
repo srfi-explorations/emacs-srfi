@@ -48,6 +48,12 @@
 (defvar srfi-narrow-keyword nil
   "The current keyword being shown in the *SRFI* buffer.")
 
+(defvar srfi-abstract-directory nil
+  "A directory containing all the SRFI abstracts.")
+
+(defvar srfi-source-directory nil
+  "A directory containing all the SRFI repos.")
+
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current visible line."
   (save-excursion
@@ -109,7 +115,10 @@
   (let ((map (make-sparse-keymap)))
     (set-keymap-parent map special-mode-map)
     (define-key map (kbd "RET") 'srfi-browse-url)
+    (define-key map (kbd "a") 'srfi-abstract)
     (define-key map (kbd "d") 'srfi-browse-discussion-url)
+    (define-key map (kbd "f") 'srfi-source)
+    (define-key map (kbd "j") 'srfi-dired)
     (define-key map (kbd "k") 'srfi-keyword)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
@@ -223,6 +232,37 @@
                       nil t nil nil (list nil))))
   (setq srfi-narrow-keyword keyword)
   (srfi-list))
+
+(defun srfi-dired ()
+  "Open directory containing SRFI document in Dired."
+  (interactive)
+  (assert srfi-source-directory
+	  nil
+	  "You must set `srfi-source-directory' first.")
+  (dired
+   (substitute-in-file-name
+    (format "%s/srfi-%d/" srfi-source-directory (srfi--number-on-line)))))
+
+(defun srfi-source ()
+  "Open SRFI document."
+  (interactive)
+  (assert srfi-source-directory
+	  nil
+	  "You must set `srfi-source-directory' first.")
+  (let ((srfi (srfi--number-on-line)))
+    (find-file
+     (substitute-in-file-name
+      (format "%s/srfi-%d/srfi-%d.html" srfi-source-directory srfi srfi)))))
+
+(defun srfi-abstract ()
+  "Open SRFI abstract document."
+  (interactive)
+  (assert srfi-source-directory
+	  nil
+	  "You must set `srfi-abstract-directory' first.")
+  (find-file
+   (substitute-in-file-name
+    (format "%s/%d.html" srfi-abstract-directory (srfi--number-on-line)))))
 
 (provide 'srfi)
 
