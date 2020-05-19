@@ -219,7 +219,7 @@
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
   (interactive (list (completing-read
-                      "SRFI keyword: " srfi-data-keywords
+                      "Narrow SRFIs to keyword: " srfi-data-keywords
                       nil t nil nil (list nil))))
   (setq srfi-narrow-keyword keyword)
   (srfi-list))
