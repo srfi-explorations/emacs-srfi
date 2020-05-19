@@ -45,6 +45,9 @@
 (defvar srfi-narrow-query ""
   "The current narrowing text in effect in the *SRFI* buffer.")
 
+(defvar srfi-narrow-keyword nil
+  "The current keyword being shown in the *SRFI* buffer.")
+
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current visible line."
   (save-excursion
@@ -107,6 +110,7 @@
     (set-keymap-parent map special-mode-map)
     (define-key map (kbd "RET") 'srfi-browse-url)
     (define-key map (kbd "d") 'srfi-browse-discussion-url)
+    (define-key map (kbd "k") 'srfi-keyword)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
     (define-key map (kbd "S") 'srfi-fresh-search)
@@ -157,7 +161,10 @@
       (erase-buffer)
       (srfi-mode)
       (insert
-       "Scheme Requests for Implementation\n"
+       "Scheme Requests for Implementation"
+       (if (not srfi-narrow-keyword) ""
+         (concat " (" srfi-narrow-keyword ")"))
+       "\n"
        "\n"
        "RET: browse SRFI document | "
        "d: discussion | "
@@ -173,13 +180,16 @@
                  (status (elt srfi-data (+ base 1)))
                  (title  (elt srfi-data (+ base 2)))
                  (beg    (point)))
-            (insert (format "SRFI %3d: %s (%s)\n" number title
-                            (cl-case status
-                              ((final) year)
-                              ((withdrawn) (format "%S, withdrawn" year))
-                              (t status))))
-            (let ((end (point)))
-              (put-text-property beg end 'srfi-number number))))))
+            (when (or (not srfi-narrow-keyword)
+                      (member number (cdr (assoc srfi-narrow-keyword
+                                                 srfi-data-keywords))))
+              (insert (format "SRFI %3d: %s (%s)\n" number title
+                              (cl-case status
+                                ((final) year)
+                                ((withdrawn) (format "%S, withdrawn" year))
+                                (t status))))
+              (let ((end (point)))
+                (put-text-property beg end 'srfi-number number)))))))
     (srfi--narrow srfi-narrow-query)))
 
 ;;;###autoload
@@ -205,6 +215,13 @@
   (interactive)
   (setq srfi-narrow-query "")
   (srfi))
+
+(defun srfi-keyword (keyword)
+  (interactive (list (completing-read
+                      "SRFI keyword: " srfi-data-keywords
+                      nil t nil nil (list nil))))
+  (setq srfi-narrow-keyword keyword)
+  (srfi-list))
 
 (provide 'srfi)
 

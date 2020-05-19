@@ -408,6 +408,83 @@
    ]
   "Table of all known SRFI documents.")
 
+(defconst srfi-data-keywords
+  '(
+    ("Algorithm"
+     32 95 132)
+    ("Arithmetic"
+     70 73 77 94 141 143 144)
+    ("Assignment"
+     17)
+    ("Binding"
+     2 5 8 11 15 39 61 65 71 89 139 177)
+    ("Comparison"
+     67 85 114 128 162)
+    ("Concurrency"
+     18 21)
+    ("Continuations"
+     157)
+    ("Control Flow"
+     2 12 23 42 61 87)
+    ("Data Structure"
+     1 3 4 9 13 14 19 25 33 40 41 43 44 45 47 52
+     57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
+     115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
+     137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
+     178 179 182 184 185 189 195 196)
+    ("Error Handling"
+     23)
+    ("Exceptions"
+     12 34 35 36)
+    ("Features"
+     0 7 55 96)
+    ("I/O"
+     6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
+     159 166 167 168 180 181 183 186 192)
+    ("Internationalization"
+     75 129)
+    ("Introspection"
+     102 191)
+    ("Lazy Evaluation"
+     65 155)
+    ("Miscellaneous"
+     20 31 92 120 123 154 165 172 173 187)
+    ("Modules"
+     83 97)
+    ("Multiple Value Returns"
+     51 86 182)
+    ("Operating System"
+     6 22 37 50 98 103 104 112 138 170 176 193)
+    ("Optimization"
+     145)
+    ("Parameters"
+     39 139)
+    ("Pattern Matching"
+     16)
+    ("R6RS process"
+     75 76 77 83 93)
+    ("R7RS Large"
+     1 14 41 101 111 113 115 116 117 124 125 127 132 133 134 135
+     141 143 144 146 151 158 159 160)
+    ("R7RS Large: Red Edition"
+     1 14 41 101 111 113 116 117 121 124 125 127 132 133 134 135)
+    ("R7RS Large: Tangerine Edition"
+     115 141 143 144 146 151 158 159 160)
+    ("Randomness"
+     27 194)
+    ("Reader Syntax"
+     10 30 49 58 62 88 105 107 108 109 110 119 163)
+    ("Superseded"
+     40 114 121 142)
+    ("Syntax"
+     24 26 46 53 72 93 147 148 149 156 169 188 190)
+    ("Testing"
+     64 78)
+    ("Type Checking"
+     92 187)
+    )
+  "Table of SRFI numbers by keyword.")
+
 (provide 'srfi-data)
 
 ;;; srfi-data.el ends here
