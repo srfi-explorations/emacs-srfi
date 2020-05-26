@@ -231,6 +231,7 @@
                       "Narrow SRFIs to keyword: " srfi-data-keywords
                       nil t nil nil (list nil))))
   (setq srfi-narrow-keyword keyword)
+  (setq srfi-narrow-query "")
   (srfi-list))
 
 (defun srfi-dired ()
