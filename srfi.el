@@ -232,7 +232,7 @@
                       nil t nil nil (list nil))))
   (setq srfi-narrow-keyword keyword)
   (unless (= 0 (length srfi-narrow-query))
-    (message "NOTE: The SRFI search filter is still active as well."))
+    (message "NOTE: The SRFI search filter is still active."))
   (srfi-list))
 
 (defun srfi-dired ()
