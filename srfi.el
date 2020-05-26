@@ -237,8 +237,8 @@
   "Open directory containing SRFI document in Dired."
   (interactive)
   (assert srfi-source-directory
-	  nil
-	  "You must set `srfi-source-directory' first.")
+          nil
+          "You must set `srfi-source-directory' first.")
   (dired
    (substitute-in-file-name
     (format "%s/srfi-%d/" srfi-source-directory (srfi--number-on-line)))))
@@ -247,8 +247,8 @@
   "Open SRFI document."
   (interactive)
   (assert srfi-source-directory
-	  nil
-	  "You must set `srfi-source-directory' first.")
+          nil
+          "You must set `srfi-source-directory' first.")
   (let ((srfi (srfi--number-on-line)))
     (find-file
      (substitute-in-file-name
@@ -258,8 +258,8 @@
   "Open SRFI abstract document."
   (interactive)
   (assert srfi-source-directory
-	  nil
-	  "You must set `srfi-abstract-directory' first.")
+          nil
+          "You must set `srfi-abstract-directory' first.")
   (find-file
    (substitute-in-file-name
     (format "%s/%d.html" srfi-abstract-directory (srfi--number-on-line)))))
