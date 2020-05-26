@@ -231,6 +231,8 @@
                       "Narrow SRFIs to keyword: " srfi-data-keywords
                       nil t nil nil (list nil))))
   (setq srfi-narrow-keyword keyword)
+  (unless (= 0 (length srfi-narrow-query))
+    (message "NOTE: The SRFI search filter is still active as well."))
   (srfi-list))
 
 (defun srfi-dired ()
