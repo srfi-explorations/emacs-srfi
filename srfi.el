@@ -55,15 +55,12 @@
   "A directory containing all the SRFI repos.")
 
 (defun srfi--number-on-line ()
-  "Get the number of the SRFI on the current visible line."
-  (save-excursion
-    (when (invisible-p (point))
-      (goto-char (next-single-property-change (point) 'invisible)))
-    (or (get-text-property (point) 'srfi-number)
-        (error "No SRFI on this line"))))
+  "Get the number of the SRFI on the current line."
+  (or (get-text-property (point) 'srfi-number)
+      (error "No SRFI on this line")))
 
 (defun srfi--goto-first-srfi ()
-  "Go to line of first visible SRFI."
+  "Go to line of first SRFI."
   (goto-char (next-single-property-change
               (point-min) 'srfi-number nil (point-max))))
 
@@ -140,23 +137,54 @@
 
 (defun srfi--narrow (query)
   "Internal function to narrow the *SRFI* buffer based on QUERY."
-  (with-current-buffer (get-buffer "*SRFI*")
-    (with-selected-window (get-buffer-window (current-buffer))
-      (widen)
-      (let ((inhibit-read-only t) (case-fold-search t))
-        (goto-char (point-min))
-        (while (< (goto-char (next-single-property-change
-                              (point) 'srfi-number nil (point-max)))
-                  (point-max))
-          (let ((beg (point)) (end (1+ (point-at-eol))))
-            (get-text-property (point) 'srfi-number)
-            (remove-text-properties beg end '(invisible))
-            (unless (looking-at (concat "^.*?" (regexp-quote query)))
-              (put-text-property beg end 'invisible 'srfi-narrow)))))
-      (goto-char (point-min))
-      (let ((recenter-redisplay nil))
-        (recenter 0))
-      (srfi--goto-first-srfi))))
+  (save-match-data
+    (with-current-buffer (get-buffer "*SRFI*")
+      (with-selected-window (get-buffer-window (current-buffer))
+        (cl-assert (null (buffer-file-name)))
+        (let* ((inhibit-read-only t)
+               (case-fold-search t)
+               (srfi-count (truncate (length srfi-data) 3))
+               (srfi-numbers (if srfi-narrow-keyword
+                                 (cdr (assoc srfi-narrow-keyword
+                                             srfi-data-keywords))
+                               (let ((ns '()) (n srfi-count))
+                                 (while (> n 0) (push (setq n (1- n)) ns))
+                                 ns))))
+          (erase-buffer)
+          (srfi-mode)
+          (insert
+           "Scheme Requests for Implementation"
+           (if (not srfi-narrow-keyword) ""
+             (concat " (" srfi-narrow-keyword ")"))
+           "\n"
+           "\n"
+           "RET: browse SRFI document | "
+           "d: discussion | "
+           "r: repo | "
+           "s: search | "
+           "w: website\n"
+           "\n")
+          (dolist (number srfi-numbers)
+            (let* ((base   (* number 3))
+                   (year   (elt srfi-data base))
+                   (status (elt srfi-data (+ base 1)))
+                   (title  (elt srfi-data (+ base 2)))
+                   (s-text (cl-case status
+                             ((final) year)
+                             ((withdrawn) (format "%S, withdrawn" year))
+                             (t status)))
+                   (line   (format "SRFI %3d: %s (%s)\n"
+                                   number title s-text))
+                   (beg    (point)))
+              (when (or (= 0 (length query))
+                        (string-match (regexp-quote query) line))
+                (insert line)
+                (let ((end (point)))
+                  (put-text-property beg end 'srfi-number number)))))
+          (goto-char (point-min))
+          (let ((recenter-redisplay nil))
+            (recenter 0))
+          (srfi--goto-first-srfi))))))
 
 (defun srfi--narrow-minibuffer (&rest _ignored)
   "Internal function to narrow the *SRFI* buffer."
@@ -164,42 +192,7 @@
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (with-current-buffer (get-buffer-create "*SRFI*")
-    (cl-assert (null (buffer-file-name)))
-    (let ((inhibit-read-only t))
-      (erase-buffer)
-      (srfi-mode)
-      (insert
-       "Scheme Requests for Implementation"
-       (if (not srfi-narrow-keyword) ""
-         (concat " (" srfi-narrow-keyword ")"))
-       "\n"
-       "\n"
-       "RET: browse SRFI document | "
-       "d: discussion | "
-       "r: repo | "
-       "s: search | "
-       "w: website\n"
-       "\n")
-      (let ((count (truncate (length srfi-data) 3)))
-        (dotimes (i count)
-          (let* ((number (- count 1 i))
-                 (base   (* number 3))
-                 (year   (elt srfi-data base))
-                 (status (elt srfi-data (+ base 1)))
-                 (title  (elt srfi-data (+ base 2)))
-                 (beg    (point)))
-            (when (or (not srfi-narrow-keyword)
-                      (member number (cdr (assoc srfi-narrow-keyword
-                                                 srfi-data-keywords))))
-              (insert (format "SRFI %3d: %s (%s)\n" number title
-                              (cl-case status
-                                ((final) year)
-                                ((withdrawn) (format "%S, withdrawn" year))
-                                (t status))))
-              (let ((end (point)))
-                (put-text-property beg end 'srfi-number number)))))))
-    (srfi--narrow srfi-narrow-query)))
+  (srfi--narrow srfi-narrow-query))
 
 ;;;###autoload
 (defun srfi-list ()
