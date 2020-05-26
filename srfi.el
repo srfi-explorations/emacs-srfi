@@ -145,10 +145,12 @@
                (case-fold-search t)
                (srfi-count (truncate (length srfi-data) 3))
                (srfi-numbers (if srfi-narrow-keyword
-                                 (cdr (assoc srfi-narrow-keyword
-                                             srfi-data-keywords))
-                               (let ((ns '()) (n srfi-count))
-                                 (while (> n 0) (push (setq n (1- n)) ns))
+                                 (reverse (cdr (assoc srfi-narrow-keyword
+                                                      srfi-data-keywords)))
+                               (let ((n 0) (ns '()))
+                                 (while (< n srfi-count)
+                                   (push n ns)
+                                   (setq n (+ n 1)))
                                  ns))))
           (erase-buffer)
           (srfi-mode)
