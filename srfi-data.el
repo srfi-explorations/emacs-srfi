@@ -388,7 +388,7 @@
    ;; SRFI 187
    2020 withdrawn "ALAMBDA and ADEFINE"
    ;; SRFI 188
-   nil draft "Splicing binding constructs for syntactic keywords"
+   2020 final "Splicing binding constructs for syntactic keywords"
    ;; SRFI 189
    nil draft "Maybe and Either: optional container types"
    ;; SRFI 190
