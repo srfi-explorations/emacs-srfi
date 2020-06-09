@@ -405,6 +405,8 @@
    nil draft "Multiple-value boxes"
    ;; SRFI 196
    nil draft "Range Objects"
+   ;; SRFI 197
+   nil draft "Threading Macros"
    ]
   "Table of all known SRFI documents.")
 
@@ -477,7 +479,7 @@
     ("Superseded"
      40 114 121 142)
     ("Syntax"
-     24 26 46 53 72 93 147 148 149 156 169 188 190)
+     24 26 46 53 72 93 147 148 149 156 169 188 190 197)
     ("Testing"
      64 78)
     ("Type Checking"
