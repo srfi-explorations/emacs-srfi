@@ -406,7 +406,7 @@
    ;; SRFI 196
    nil draft "Range Objects"
    ;; SRFI 197
-   nil draft "Threading Macros"
+   nil draft "Expression Chaining Operators"
    ]
   "Table of all known SRFI documents.")
 
