@@ -392,7 +392,7 @@
    ;; SRFI 189
    nil draft "Maybe and Either: optional container types"
    ;; SRFI 190
-   nil draft "Coroutine Generators"
+   2020 final "Coroutine Generators"
    ;; SRFI 191
    nil draft "Procedure Arity Inspection"
    ;; SRFI 192
