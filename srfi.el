@@ -115,6 +115,7 @@
     (define-key map (kbd "a") 'srfi-abstract)
     (define-key map (kbd "d") 'srfi-browse-discussion-url)
     (define-key map (kbd "f") 'srfi-source)
+    (define-key map (kbd "h") 'srfi-browse-landing-page-url)
     (define-key map (kbd "j") 'srfi-dired)
     (define-key map (kbd "k") 'srfi-keyword)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
