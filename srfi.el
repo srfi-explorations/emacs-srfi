@@ -255,7 +255,7 @@
 (defun srfi-abstract ()
   "Open SRFI abstract document."
   (interactive)
-  (cl-assert srfi-source-directory
+  (cl-assert srfi-abstract-directory
              nil
              "You must set `srfi-abstract-directory' first.")
   (find-file
