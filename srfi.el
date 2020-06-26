@@ -137,7 +137,7 @@
                      "Try M-x srfi."))))
 
 (defun srfi--narrow (query)
-  "Internal function to narrow the *SRFI* buffer based on QUERY."
+  "Internal function to narrow the *SRFI* buffer based on regexp QUERY."
   (save-match-data
     (with-current-buffer (get-buffer "*SRFI*")
       (with-selected-window (get-buffer-window (current-buffer))
@@ -179,7 +179,7 @@
                                    number title s-text))
                    (beg    (point)))
               (when (or (= 0 (length query))
-                        (string-match (regexp-quote query) line))
+                        (string-match query line))
                 (insert line)
                 (let ((end (point)))
                   (put-text-property beg end 'srfi-number number)))))
@@ -190,7 +190,7 @@
 
 (defun srfi--narrow-minibuffer (&rest _ignored)
   "Internal function to narrow the *SRFI* buffer."
-  (srfi--narrow (minibuffer-contents)))
+  (srfi--narrow (regexp-quote (minibuffer-contents))))
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
@@ -212,7 +212,18 @@
   (minibuffer-with-setup-hook
       (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
                            nil 'local))
-    (setq srfi-narrow-query (read-string "SRFI: " srfi-narrow-query))))
+    (setq srfi-narrow-query
+	  (regexp-quote (read-string "SRFI: " srfi-narrow-query)))))
+
+;;;###autoload
+(defun srfi-jump (number)
+  "Jump to srfi NUMBER, which is supplied as a prefix argument or
+read from the minibuffer."
+  (interactive "NSRFI: ")
+  (srfi-list)
+  (setq srfi-narrow-keyword nil)
+  (setq srfi-narrow-query "")
+  (srfi--narrow (concat "\\<" (number-to-string number) "\\>")))
 
 (defun srfi-fresh-search ()
   "Show the *SRFI* buffer and live-narrow it from scratch."
