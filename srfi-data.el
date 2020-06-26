@@ -409,6 +409,8 @@
    nil draft "Expression Chaining Operators"
    ;; SRFI 198
    nil draft "POSIX system call exceptions"
+   ;; SRFI 199
+   nil draft "POSIX errno manipulation"
    ]
   "Table of all known SRFI documents.")
 
@@ -458,7 +460,7 @@
     ("Multiple Value Returns"
      51 86 182)
     ("Operating System"
-     6 22 37 50 98 103 104 112 138 170 176 193 198)
+     6 22 37 50 98 103 104 112 138 170 176 193 198 199)
     ("Optimization"
      145)
     ("Parameters"
