@@ -76,6 +76,10 @@
   "Get the web URL for the mailing list archive of SRFI-NUMBER."
   (format "https://srfi-email.schemers.org/srfi-%d/" srfi-number))
 
+(defun srfi--discussion-email-address (srfi-number)
+  "Get the email address for the mailing list of SRFI-NUMBER."
+  (format "srfi-%d@srfi.schemers.org" srfi-number))
+
 (defun srfi--landing-page-url (srfi-number)
   "Get the web URL for the landing page of SRFI-NUMBER."
   (format "https://srfi.schemers.org/srfi-%d/"
@@ -106,6 +110,11 @@
   (interactive)
   (browse-url (srfi--document-url (srfi--number-on-line))))
 
+(defun srfi-send-mail ()
+  "Send an email to the mailing list of the SRFI on the current line."
+  (interactive)
+  (mail nil (srfi--discussion-email-address (srfi--number-on-line))))
+
 (defun srfi-browse-website ()
   "Browse the home page of the SRFI specification process."
   (interactive)
@@ -121,6 +130,7 @@
     (define-key map (kbd "h") 'srfi-browse-landing-page-url)
     (define-key map (kbd "j") 'srfi-dired)
     (define-key map (kbd "k") 'srfi-keyword)
+    (define-key map (kbd "m") 'srfi-send-mail)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
     (define-key map (kbd "S") 'srfi-fresh-search)
