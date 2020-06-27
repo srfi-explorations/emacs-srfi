@@ -214,7 +214,7 @@
       (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
                            nil 'local))
     (setq srfi-narrow-query
-	  (regexp-quote (read-string "SRFI: " srfi-narrow-query)))))
+          (regexp-quote (read-string "SRFI: " srfi-narrow-query)))))
 
 ;;;###autoload
 (defun srfi-jump (number)
