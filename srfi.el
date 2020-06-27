@@ -149,9 +149,8 @@
                                  (reverse (cdr (assoc srfi-narrow-keyword
                                                       srfi-data-keywords)))
                                (let ((ns '()))
-				 (dotimes (n srfi-count)
-				   (push n ns))
-				 ns))))
+				 (dotimes (n srfi-count ns)
+				   (push n ns))))))
           (erase-buffer)
           (srfi-mode)
           (insert
