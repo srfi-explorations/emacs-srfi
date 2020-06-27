@@ -195,7 +195,7 @@
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (srfi--narrow-to-regexp srfi-narrow-query))
+  (srfi--narrow-to-regexp (regexp-quote srfi-narrow-query)))
 
 ;;;###autoload
 (defun srfi-list ()
