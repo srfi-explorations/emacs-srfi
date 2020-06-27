@@ -60,7 +60,10 @@
       (error "No SRFI on this line")))
 
 (defun srfi--goto-first-srfi ()
-  "Go to line of first SRFI."
+  "Scroll window to top and go to line of first SRFI."
+  (goto-char (point-min))
+  (let ((recenter-redisplay nil))
+    (recenter 0))
   (goto-char (next-single-property-change
               (point-min) 'srfi-number nil (point-max))))
 
@@ -182,9 +185,6 @@
                 (insert line)
                 (let ((end (point)))
                   (put-text-property beg end 'srfi-number number)))))
-          (goto-char (point-min))
-          (let ((recenter-redisplay nil))
-            (recenter 0))
           (srfi--goto-first-srfi))))))
 
 (defun srfi--narrow-minibuffer (&rest _ignored)
