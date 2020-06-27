@@ -218,8 +218,9 @@
 
 ;;;###autoload
 (defun srfi-jump (number)
-  "Jump to srfi NUMBER, which is supplied as a prefix argument or
-read from the minibuffer."
+  "Jump to srfi NUMBER.
+
+NUMBER is supplied as a prefix argument or read from the minibuffer."
   (interactive "NSRFI: ")
   (srfi-list)
   (setq srfi-narrow-keyword nil)
