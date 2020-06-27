@@ -5,7 +5,7 @@
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/srfi-explorations/emacs-srfi
 ;; Version: 0.3.0
-;; Package-Requires: ((emacs "25.1") (cl-lib "0.5"))
+;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: languages util
 ;;
 ;; This file is not part of GNU Emacs.
