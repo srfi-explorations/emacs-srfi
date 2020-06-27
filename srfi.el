@@ -151,9 +151,11 @@
                (srfi-numbers (if srfi-narrow-keyword
                                  (reverse (cdr (assoc srfi-narrow-keyword
                                                       srfi-data-keywords)))
-                               (let ((ns '()))
-				 (dotimes (n srfi-count ns)
-				   (push n ns))))))
+                               (let ((n 0) (ns '()))
+                                 (while (< n srfi-count)
+                                   (push n ns)
+                                   (setq n (+ n 1)))
+                                 ns))))
           (erase-buffer)
           (srfi-mode)
           (insert
