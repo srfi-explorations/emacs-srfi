@@ -370,7 +370,7 @@
    ;; SRFI 178
    nil draft "Bitvector library"
    ;; SRFI 179
-   nil draft "Nonempty Intervals and Generalized Arrays (Updated)"
+   2020 final "Nonempty Intervals and Generalized Arrays (Updated)"
    ;; SRFI 180
    nil draft "JSON"
    ;; SRFI 181
