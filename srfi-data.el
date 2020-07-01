@@ -372,7 +372,7 @@
    ;; SRFI 179
    2020 final "Nonempty Intervals and Generalized Arrays (Updated)"
    ;; SRFI 180
-   nil draft "JSON"
+   2020 final "JSON"
    ;; SRFI 181
    nil draft "Custom ports"
    ;; SRFI 182
