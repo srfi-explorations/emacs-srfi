@@ -149,6 +149,14 @@
     (message (concat "Note: srfi-mode is only meant for the *SRFI* buffer. "
                      "Try M-x srfi."))))
 
+(defun srfi--reverse-iota (count)
+  "Internal function to return the integers 0..COUNT-1 as a list."
+  (let ((n 0) (ns '()))
+    (while (< n count)
+      (push n ns)
+      (setq n (+ n 1)))
+    ns))
+
 (defun srfi--narrow-to-regexp (regexp)
   "Internal function to narrow the *SRFI* buffer based on REGEXP."
   (save-match-data
@@ -161,11 +169,7 @@
                (srfi-numbers (if srfi-narrow-keyword
                                  (reverse (cdr (assoc srfi-narrow-keyword
                                                       srfi-data-keywords)))
-                               (let ((n 0) (ns '()))
-                                 (while (< n srfi-count)
-                                   (push n ns)
-                                   (setq n (+ n 1)))
-                                 ns))))
+                               (srfi--reverse-iota srfi-count))))
           (erase-buffer)
           (srfi-mode)
           (insert
