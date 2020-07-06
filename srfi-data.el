@@ -374,7 +374,7 @@
    ;; SRFI 180
    2020 final "JSON"
    ;; SRFI 181
-   nil draft "Custom ports"
+   nil draft "Custom ports (including transcoded ports)"
    ;; SRFI 182
    2020 withdrawn "ADBMAL, ALET, and ALET*"
    ;; SRFI 183
@@ -394,7 +394,7 @@
    ;; SRFI 190
    2020 final "Coroutine Generators"
    ;; SRFI 191
-   nil draft "Procedure Arity Inspection"
+   2020 withdrawn "Procedure Arity Inspection"
    ;; SRFI 192
    nil draft "Port Positioning"
    ;; SRFI 193
