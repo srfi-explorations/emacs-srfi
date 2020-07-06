@@ -260,9 +260,8 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
 (defun srfi-dired ()
   "Open directory containing SRFI document in Dired."
   (interactive)
-  (cl-assert srfi-source-directory
-             nil
-             "You must set `srfi-source-directory' first.")
+  (unless srfi-source-directory
+    (error "You must set `srfi-source-directory' first."))
   (dired
    (substitute-in-file-name
     (format "%s/srfi-%d/" srfi-source-directory (srfi--number-on-line)))))
@@ -270,9 +269,8 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
 (defun srfi-source ()
   "Open SRFI document."
   (interactive)
-  (cl-assert srfi-source-directory
-             nil
-             "You must set `srfi-source-directory' first.")
+  (unless srfi-source-directory
+    (error "You must set `srfi-source-directory' first."))
   (let ((srfi (srfi--number-on-line)))
     (find-file
      (substitute-in-file-name
@@ -281,9 +279,8 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
 (defun srfi-abstract ()
   "Open SRFI abstract document."
   (interactive)
-  (cl-assert srfi-abstract-directory
-             nil
-             "You must set `srfi-abstract-directory' first.")
+  (unless srfi-abstract-directory
+    (error "You must set `srfi-abstract-directory' first."))
   (find-file
    (substitute-in-file-name
     (format "%s/%d.html" srfi-abstract-directory (srfi--number-on-line)))))
