@@ -390,7 +390,7 @@
    ;; SRFI 188
    2020 final "Splicing binding constructs for syntactic keywords"
    ;; SRFI 189
-   nil draft "Maybe and Either: optional container types"
+   2020 final "Maybe and Either: optional container types"
    ;; SRFI 190
    2020 final "Coroutine Generators"
    ;; SRFI 191
@@ -431,7 +431,7 @@
     ("Assignment"
      17)
     ("Binding"
-     2 5 8 11 15 39 61 65 71 89 139 177 201 202 203)
+     2 5 8 11 15 39 61 65 71 89 139 177 201 202)
     ("Comparison"
      67 85 114 128 162)
     ("Concurrency"
@@ -439,7 +439,7 @@
     ("Continuations"
      157)
     ("Control Flow"
-     2 12 23 42 61 87 202 203)
+     2 12 23 42 61 87 202)
     ("Data Structure"
      1 3 4 9 13 14 19 25 33 40 41 43 44 45 47 52
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
@@ -462,7 +462,7 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187)
+     20 31 92 120 123 154 165 172 173 187 203)
     ("Modules"
      83 97)
     ("Multiple Value Returns"
@@ -474,7 +474,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 203)
+     16 200 201 202)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
