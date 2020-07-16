@@ -419,6 +419,8 @@
    nil draft "Pattern-matching Variant of the and-let* Form that Supports Multiple Values"
    ;; SRFI 203
    nil draft "A Simple Picture Language in the Style of SICP"
+   ;; SRFI 204
+   nil draft "Wright-Cartwright-Shinn Pattern Matcher"
    ]
   "Table of all known SRFI documents.")
 
@@ -474,7 +476,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202)
+     16 200 201 202 204)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
