@@ -408,7 +408,7 @@
    ;; SRFI 197
    nil draft "Expression Chaining Operators"
    ;; SRFI 198
-   nil draft "POSIX system call exceptions"
+   nil draft "Foreign Interface Error Handling"
    ;; SRFI 199
    nil draft "POSIX errno manipulation"
    ;; SRFI 200
