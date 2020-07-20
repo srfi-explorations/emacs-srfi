@@ -410,7 +410,7 @@
    ;; SRFI 198
    nil draft "Foreign Interface Error Handling"
    ;; SRFI 199
-   nil draft "POSIX errno manipulation"
+   2020 withdrawn "POSIX errno manipulation"
    ;; SRFI 200
    nil draft "Pattern Matching"
    ;; SRFI 201
