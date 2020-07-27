@@ -421,6 +421,8 @@
    nil draft "A Simple Picture Language in the Style of SICP"
    ;; SRFI 204
    nil draft "Wright-Cartwright-Shinn Pattern Matcher"
+   ;; SRFI 205
+   nil draft "POSIX Terminal Fundamentals"
    ]
   "Table of all known SRFI documents.")
 
@@ -470,7 +472,7 @@
     ("Multiple Value Returns"
      51 86 182)
     ("Operating System"
-     6 22 37 50 98 103 104 112 138 170 176 193 198 199)
+     6 22 37 50 98 103 104 112 138 170 176 193 198 199 205)
     ("Optimization"
      145)
     ("Parameters"
