@@ -344,7 +344,7 @@
    ;; SRFI 165
    2019 final "The Environment Monad"
    ;; SRFI 166
-   nil draft "Monadic Formatting"
+   2020 final "Monadic Formatting"
    ;; SRFI 167
    2019 final "Ordered Key Value Store"
    ;; SRFI 168
