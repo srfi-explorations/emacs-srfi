@@ -330,7 +330,7 @@
    ;; SRFI 158
    2017 final "Generators and Accumulators"
    ;; SRFI 159
-   2018 final "Combinator Formatting"
+   2020 withdrawn "Combinator Formatting"
    ;; SRFI 160
    2019 final "Homogeneous numeric vector libraries"
    ;; SRFI 161
@@ -366,7 +366,7 @@
    ;; SRFI 176
    2020 final "Version flag"
    ;; SRFI 177
-   nil draft "Portable keyword arguments"
+   2020 withdrawn "Portable keyword arguments"
    ;; SRFI 178
    nil draft "Bitvector library"
    ;; SRFI 179
@@ -396,7 +396,7 @@
    ;; SRFI 191
    2020 withdrawn "Procedure Arity Inspection"
    ;; SRFI 192
-   nil draft "Port Positioning"
+   2020 final "Port Positioning"
    ;; SRFI 193
    nil draft "Command lines"
    ;; SRFI 194
