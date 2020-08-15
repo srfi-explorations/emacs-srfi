@@ -425,6 +425,8 @@
    nil draft "POSIX Terminal Fundamentals"
    ;; SRFI 206
    nil draft "Auxiliary Syntax Keywords"
+   ;; SRFI 207
+   nil draft "String-notated bytevectors"
    ]
   "Table of all known SRFI documents.")
 
@@ -493,7 +495,7 @@
     ("Randomness"
      27 194)
     ("Reader Syntax"
-     10 30 49 58 62 88 105 107 108 109 110 119 163)
+     10 30 49 58 62 88 105 107 108 109 110 119 163 207)
     ("Superseded"
      40 114 121 142 159)
     ("Syntax"
