@@ -423,6 +423,8 @@
    nil draft "Wright-Cartwright-Shinn Pattern Matcher"
    ;; SRFI 205
    nil draft "POSIX Terminal Fundamentals"
+   ;; SRFI 206
+   nil draft "Auxiliary Syntax Keywords"
    ]
   "Table of all known SRFI documents.")
 
@@ -493,9 +495,9 @@
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163)
     ("Superseded"
-     40 114 121 142)
+     40 114 121 142 159)
     ("Syntax"
-     24 26 46 53 72 93 147 148 149 156 169 188 190 197 201)
+     24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206)
     ("Testing"
      64 78)
     ("Type Checking"
