@@ -368,7 +368,7 @@
    ;; SRFI 177
    2020 withdrawn "Portable keyword arguments"
    ;; SRFI 178
-   nil draft "Bitvector library"
+   2020 final "Bitvector library"
    ;; SRFI 179
    2020 final "Nonempty Intervals and Generalized Arrays (Updated)"
    ;; SRFI 180
