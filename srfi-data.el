@@ -368,7 +368,7 @@
    ;; SRFI 177
    2020 withdrawn "Portable keyword arguments"
    ;; SRFI 178
-   2020 final "Bitvector library"
+   nil draft "Bitvector library"
    ;; SRFI 179
    2020 final "Nonempty Intervals and Generalized Arrays (Updated)"
    ;; SRFI 180
@@ -406,9 +406,9 @@
    ;; SRFI 196
    nil draft "Range Objects"
    ;; SRFI 197
-   nil draft "Expression Chaining Operators"
+   nil draft "Pipeline Operators"
    ;; SRFI 198
-   nil draft "Foreign Interface Error Handling"
+   nil draft "Foreign Interface Status"
    ;; SRFI 199
    2020 withdrawn "POSIX errno manipulation"
    ;; SRFI 200
