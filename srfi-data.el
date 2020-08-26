@@ -400,7 +400,7 @@
    ;; SRFI 193
    nil draft "Command lines"
    ;; SRFI 194
-   nil draft "Random data generators"
+   2020 final "Random data generators"
    ;; SRFI 195
    nil draft "Multiple-value boxes"
    ;; SRFI 196
