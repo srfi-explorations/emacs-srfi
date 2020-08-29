@@ -402,7 +402,7 @@
    ;; SRFI 194
    2020 final "Random data generators"
    ;; SRFI 195
-   nil draft "Multiple-value boxes"
+   2020 final "Multiple-value boxes"
    ;; SRFI 196
    nil draft "Range Objects"
    ;; SRFI 197
@@ -474,7 +474,7 @@
     ("Modules"
      83 97)
     ("Multiple Value Returns"
-     51 86 182)
+     51 86 182 189 195)
     ("Operating System"
      6 22 37 50 98 103 104 112 138 170 176 193 198 199 205)
     ("Optimization"
