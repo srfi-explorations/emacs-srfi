@@ -427,6 +427,8 @@
    nil draft "Auxiliary Syntax Keywords"
    ;; SRFI 207
    nil draft "String-notated bytevectors"
+   ;; SRFI 208
+   nil draft "NaN procedures"
    ]
   "Table of all known SRFI documents.")
 
@@ -434,8 +436,6 @@
   '(
     ("Algorithm"
      32 95 132)
-    ("Arithmetic"
-     70 73 77 94 141 143 144)
     ("Assignment"
      17)
     ("Binding"
@@ -453,7 +453,7 @@
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
-     178 179 182 184 185 189 195 196)
+     178 179 182 184 185 189 195 196 208)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
@@ -474,7 +474,9 @@
     ("Modules"
      83 97)
     ("Multiple Value Returns"
-     51 86 182 189 195)
+     11 51 71 86 182 189 195)
+    ("Numbers"
+     4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
     ("Operating System"
      6 22 37 50 98 103 104 112 138 170 176 193 198 199 205)
     ("Optimization"
