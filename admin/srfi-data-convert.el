@@ -6,7 +6,6 @@
 ;; TODO: Currently copy-pasted from <srfi-common/admin/srfis.scm>.
 (defconst srfi-data-convert--keyword-to-title
   '((algorithm "Algorithm")
-    (arithmetic "Arithmetic")
     (assignment "Assignment")
     (binding "Binding")
     (comparison "Comparison")
@@ -24,6 +23,7 @@
     (miscellaneous "Miscellaneous")
     (modules "Modules")
     (multiple-value-returns "Multiple Value Returns")
+    (numbers "Numbers")
     (operating-system "Operating System")
     (optimization "Optimization")
     (parameters "Parameters")
