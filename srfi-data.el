@@ -431,6 +431,8 @@
    nil draft "NaN procedures"
    ;; SRFI 209
    nil draft "Enumerations and Enum Sets"
+   ;; SRFI 210
+   nil draft "Procedures and Syntax for Multiple Values"
    ]
   "Table of all known SRFI documents.")
 
@@ -476,7 +478,7 @@
     ("Modules"
      83 97)
     ("Multiple Value Returns"
-     11 51 71 86 182 189 195)
+     11 51 71 86 182 189 195 210)
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
     ("Operating System"
