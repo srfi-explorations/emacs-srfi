@@ -374,7 +374,7 @@
    ;; SRFI 180
    2020 final "JSON"
    ;; SRFI 181
-   nil draft "Custom ports (including transcoded ports)"
+   2020 final "Custom ports (including transcoded ports)"
    ;; SRFI 182
    2020 withdrawn "ADBMAL, ALET, and ALET*"
    ;; SRFI 183
@@ -384,7 +384,7 @@
    ;; SRFI 185
    2020 final "Linear adjustable-length strings"
    ;; SRFI 186
-   2020 final "Transcoders and transcoded ports"
+   2020 withdrawn "Transcoders and transcoded ports"
    ;; SRFI 187
    2020 withdrawn "ALAMBDA and ADEFINE"
    ;; SRFI 188
@@ -503,7 +503,7 @@
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 207)
     ("Superseded"
-     40 114 121 142 159)
+     40 114 121 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206)
     ("Testing"
