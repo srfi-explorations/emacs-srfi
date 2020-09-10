@@ -398,7 +398,7 @@
    ;; SRFI 192
    2020 final "Port Positioning"
    ;; SRFI 193
-   nil draft "Command lines"
+   2020 final "Command line"
    ;; SRFI 194
    2020 final "Random data generators"
    ;; SRFI 195
