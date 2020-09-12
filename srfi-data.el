@@ -433,6 +433,8 @@
    nil draft "Enumerations and Enum Sets"
    ;; SRFI 210
    nil draft "Procedures and Syntax for Multiple Values"
+   ;; SRFI 211
+   nil draft "Namespaces for Scheme Macro Systems"
    ]
   "Table of all known SRFI documents.")
 
@@ -505,7 +507,8 @@
     ("Superseded"
      40 114 121 142 159 186)
     ("Syntax"
-     24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206)
+     24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
+     211)
     ("Testing"
      64 78)
     ("Type Checking"
