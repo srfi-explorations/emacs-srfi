@@ -408,7 +408,7 @@
    ;; SRFI 197
    2020 final "Pipeline Operators"
    ;; SRFI 198
-   nil draft "Foreign Interface Status"
+   2020 withdrawn "Foreign Interface Status"
    ;; SRFI 199
    2020 withdrawn "POSIX errno manipulation"
    ;; SRFI 200
