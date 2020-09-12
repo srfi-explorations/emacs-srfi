@@ -406,7 +406,7 @@
    ;; SRFI 196
    nil draft "Range Objects"
    ;; SRFI 197
-   nil draft "Pipeline Operators"
+   2020 final "Pipeline Operators"
    ;; SRFI 198
    nil draft "Foreign Interface Status"
    ;; SRFI 199
