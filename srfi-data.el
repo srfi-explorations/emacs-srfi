@@ -418,7 +418,7 @@
    ;; SRFI 202
    nil draft "Pattern-matching Variant of the and-let* Form that Supports Multiple Values"
    ;; SRFI 203
-   nil draft "A Simple Picture Language in the Style of SICP"
+   2020 final "A Simple Picture Language in the Style of SICP"
    ;; SRFI 204
    nil draft "Wright-Cartwright-Shinn Pattern Matcher"
    ;; SRFI 205
