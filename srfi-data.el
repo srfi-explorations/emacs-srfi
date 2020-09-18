@@ -404,7 +404,7 @@
    ;; SRFI 195
    2020 final "Multiple-value boxes"
    ;; SRFI 196
-   nil draft "Range Objects"
+   2020 final "Range Objects"
    ;; SRFI 197
    2020 final "Pipeline Operators"
    ;; SRFI 198
