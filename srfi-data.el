@@ -434,9 +434,11 @@
    ;; SRFI 210
    nil draft "Procedures and Syntax for Multiple Values"
    ;; SRFI 211
-   nil draft "Namespaces for Scheme Macro Systems"
+   nil draft "Scheme Macro Libraries"
    ;; SRFI 212
    nil draft "Aliases"
+   ;; SRFI 213
+   nil draft "Identifier Properties"
    ]
   "Table of all known SRFI documents.")
 
@@ -447,7 +449,7 @@
     ("Assignment"
      17)
     ("Binding"
-     2 5 8 11 15 39 61 65 71 89 139 177 201 202)
+     2 5 8 11 15 39 61 65 71 89 139 177 201 202 213)
     ("Comparison"
      67 85 114 128 162)
     ("Concurrency"
@@ -510,7 +512,7 @@
      40 114 121 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212)
+     211 212 213)
     ("Testing"
      64 78)
     ("Type Checking"
