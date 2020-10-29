@@ -352,7 +352,7 @@
    ;; SRFI 169
    2019 final "Underscores in numbers"
    ;; SRFI 170
-   nil draft "POSIX API"
+   2020 final "POSIX API"
    ;; SRFI 171
    2019 final "Transducers"
    ;; SRFI 172
