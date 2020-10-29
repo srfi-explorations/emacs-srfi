@@ -426,7 +426,7 @@
    ;; SRFI 206
    nil draft "Auxiliary Syntax Keywords"
    ;; SRFI 207
-   nil draft "String-notated bytevectors"
+   2020 final "String-notated bytevectors"
    ;; SRFI 208
    nil draft "NaN procedures"
    ;; SRFI 209
