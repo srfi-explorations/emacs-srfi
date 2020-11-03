@@ -441,6 +441,8 @@
    nil draft "Identifier Properties"
    ;; SRFI 214
    nil draft "Flexvectors"
+   ;; SRFI 215
+   nil draft "Central Log Exchange"
    ]
   "Table of all known SRFI documents.")
 
@@ -490,7 +492,7 @@
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
     ("Operating System"
-     6 22 37 50 98 103 104 112 138 170 176 193 198 199 205)
+     6 22 37 50 98 103 104 112 138 170 176 193 198 199 205 215)
     ("Optimization"
      145)
     ("Parameters"
