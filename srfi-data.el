@@ -443,6 +443,8 @@
    nil draft "Flexvectors"
    ;; SRFI 215
    nil draft "Central Log Exchange"
+   ;; SRFI 216
+   nil draft "SICP Prerequisites (Portable)"
    ]
   "Table of all known SRFI documents.")
 
@@ -484,7 +486,7 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187 203)
+     20 31 92 120 123 154 165 172 173 187 203 216)
     ("Modules"
      83 97)
     ("Multiple Value Returns"
