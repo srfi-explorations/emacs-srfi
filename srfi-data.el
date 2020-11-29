@@ -416,7 +416,7 @@
    ;; SRFI 201
    nil draft "Syntactic Extensions to the Core Scheme Bindings"
    ;; SRFI 202
-   nil draft "Pattern-matching Variant of the and-let* Form that Supports Multiple Values"
+   2020 final "Pattern-matching Variant of the and-let* Form that Supports Multiple Values"
    ;; SRFI 203
    2020 final "A Simple Picture Language in the Style of SICP"
    ;; SRFI 204
@@ -445,6 +445,8 @@
    nil draft "Central Log Exchange"
    ;; SRFI 216
    nil draft "SICP Prerequisites (Portable)"
+   ;; SRFI 217
+   nil draft "Integer Sets"
    ]
   "Table of all known SRFI documents.")
 
@@ -469,7 +471,7 @@
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
-     178 179 182 184 185 189 195 196 208 209 214)
+     178 179 182 184 185 189 195 196 208 209 214 217)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
@@ -486,10 +488,10 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187 203 216)
+     20 31 92 120 123 154 165 172 173 187)
     ("Modules"
      83 97)
-    ("Multiple Value Returns"
+    ("Multiple-Value Returns"
      11 51 71 86 182 189 195 210)
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
@@ -514,8 +516,12 @@
      27 194)
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 207)
+    ("SICP"
+     203 216)
     ("Superseded"
      40 114 121 142 159 186)
+    ("Superseded"
+)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
      211 212 213)
