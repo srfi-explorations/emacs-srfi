@@ -447,6 +447,8 @@
    nil draft "SICP Prerequisites (Portable)"
    ;; SRFI 217
    nil draft "Integer Sets"
+   ;; SRFI 218
+   nil draft "Unicode Numerals"
    ]
   "Table of all known SRFI documents.")
 
@@ -482,7 +484,7 @@
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
      159 166 167 168 180 181 183 186 192)
     ("Internationalization"
-     75 129)
+     75 129 218)
     ("Introspection"
      102 191)
     ("Lazy Evaluation"
