@@ -35,6 +35,8 @@
     (randomness "Randomness")
     (reader-syntax "Reader Syntax")
     (superseded "Superseded")
+    (sicp "SICP")
+    (superseded "Superseded")
     (syntax "Syntax")
     (testing "Testing")
     (type-checking "Type Checking")))
