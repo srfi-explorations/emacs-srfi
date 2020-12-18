@@ -430,7 +430,7 @@
    ;; SRFI 208
    nil draft "NaN procedures"
    ;; SRFI 209
-   nil draft "Enumerations and Enum Sets"
+   2020 final "Enums and Enum Sets"
    ;; SRFI 210
    nil draft "Procedures and Syntax for Multiple Values"
    ;; SRFI 211
