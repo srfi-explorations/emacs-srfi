@@ -424,7 +424,7 @@
    ;; SRFI 205
    nil draft "POSIX Terminal Fundamentals"
    ;; SRFI 206
-   nil draft "Auxiliary Syntax Keywords"
+   2020 final "Auxiliary Syntax Keywords"
    ;; SRFI 207
    2020 final "String-notated bytevectors"
    ;; SRFI 208
