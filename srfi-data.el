@@ -442,7 +442,7 @@
    ;; SRFI 214
    nil draft "Flexvectors"
    ;; SRFI 215
-   nil draft "Central Log Exchange"
+   2021 final "Central Log Exchange"
    ;; SRFI 216
    nil draft "SICP Prerequisites (Portable)"
    ;; SRFI 217
