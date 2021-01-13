@@ -414,7 +414,7 @@
    ;; SRFI 200
    nil draft "Pattern Matching"
    ;; SRFI 201
-   nil draft "Syntactic Extensions to the Core Scheme Bindings"
+   2021 final "Syntactic Extensions to the Core Scheme Bindings"
    ;; SRFI 202
    2020 final "Pattern-matching Variant of the and-let* Form that Supports Multiple Values"
    ;; SRFI 203
