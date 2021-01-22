@@ -444,7 +444,7 @@
    ;; SRFI 215
    2021 final "Central Log Exchange"
    ;; SRFI 216
-   nil draft "SICP Prerequisites (Portable)"
+   2020 final "SICP Prerequisites (Portable)"
    ;; SRFI 217
    nil draft "Integer Sets"
    ;; SRFI 218
