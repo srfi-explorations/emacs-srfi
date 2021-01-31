@@ -448,7 +448,7 @@
    ;; SRFI 217
    nil draft "Integer Sets"
    ;; SRFI 218
-   nil draft "Unicode Numerals"
+   2021 withdrawn "Unicode Numerals"
    ]
   "Table of all known SRFI documents.")
 
