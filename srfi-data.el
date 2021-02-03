@@ -449,6 +449,8 @@
    nil draft "Integer Sets"
    ;; SRFI 218
    2021 withdrawn "Unicode Numerals"
+   ;; SRFI 219
+   nil draft "Define higher-order lambda"
    ]
   "Table of all known SRFI documents.")
 
@@ -459,7 +461,7 @@
     ("Assignment"
      17)
     ("Binding"
-     2 5 8 11 15 39 61 65 71 89 139 177 201 202 213)
+     2 5 8 11 15 39 61 65 71 89 139 177 201 202 213 219)
     ("Comparison"
      67 85 114 128 162)
     ("Concurrency"
@@ -526,7 +528,7 @@
 )
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213)
+     211 212 213 219)
     ("Testing"
      64 78)
     ("Type Checking"
