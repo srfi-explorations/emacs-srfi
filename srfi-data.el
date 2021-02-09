@@ -451,6 +451,8 @@
    2021 withdrawn "Unicode Numerals"
    ;; SRFI 219:
    nil draft "Define higher-order lambda"
+   ;; SRFI 220:
+   nil draft "Line directives"
    ]
   "Table of all known SRFI documents.")
 
@@ -519,7 +521,7 @@
     ("Randomness"
      27 194)
     ("Reader Syntax"
-     10 30 49 58 62 88 105 107 108 109 110 119 163 207)
+     10 30 49 58 62 88 105 107 108 109 110 119 163 207 220)
     ("SICP"
      203 216)
     ("Superseded"
