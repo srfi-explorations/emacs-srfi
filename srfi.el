@@ -54,7 +54,7 @@
 (defvar srfi-source-directory nil
   "A directory containing all the SRFI repos.")
 
-(defvar srfi-browse-url-function nil
+(defvar srfi-browser-function nil
   "Web browser used to open SRFI-related pages.
 
 If this function is non-nil, then it is used instead of
@@ -98,9 +98,8 @@ If this function is non-nil, then it is used instead of
 
 (defun srfi--do-browse-url (url)
   "Internal helper to open URL in the web browser chosen for SRFI."
-  (let ((browse-url-browser-function
-         (or srfi-browse-url-function
-             browse-url-browser-function)))
+  (let ((browse-url-browser-function (or srfi-browser-function
+                                         browse-url-browser-function)))
     (browse-url url)))
 
 (defun srfi-browse-repository-url ()
@@ -182,13 +181,13 @@ If this function is non-nil, then it is used instead of
                (srfi-numbers (if srfi-narrow-keyword
                                  (reverse (cdr (assoc srfi-narrow-keyword
                                                       srfi-data-keywords)))
-                               (srfi--reverse-iota srfi-count))))
+                                 (srfi--reverse-iota srfi-count))))
           (erase-buffer)
           (srfi-mode)
           (insert
            "Scheme Requests for Implementation"
            (if (not srfi-narrow-keyword) ""
-             (concat " (" srfi-narrow-keyword ")"))
+               (concat " (" srfi-narrow-keyword ")"))
            "\n"
            "\n"
            "RET: browse SRFI document | "
