@@ -96,7 +96,7 @@
                                (apair (assoc keyword by-keyword)))
                           (setcdr apair (append (cdr apair) (list number)))))
                       keywords)
-                (insert (format "   ;; SRFI %d\n" number)
+                (insert (format "   ;; SRFI %d:\n" number)
                         (format "   %S %S %S\n" year status title))))
             srfis)
       (insert "   ]" "\n"
