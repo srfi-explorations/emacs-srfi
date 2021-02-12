@@ -432,7 +432,7 @@
    ;; SRFI 209:
    2020 final "Enums and Enum Sets"
    ;; SRFI 210:
-   nil draft "Procedures and Syntax for Multiple Values"
+   2021 final "Procedures and Syntax for Multiple Values"
    ;; SRFI 211:
    nil draft "Scheme Macro Libraries"
    ;; SRFI 212:
@@ -463,7 +463,8 @@
     ("Assignment"
      17)
     ("Binding"
-     2 5 8 11 15 39 61 65 71 89 139 177 201 202 213 219)
+     2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
+     219)
     ("Comparison"
      67 85 114 128 162)
     ("Concurrency"
@@ -498,7 +499,7 @@
     ("Modules"
      83 97)
     ("Multiple-Value Returns"
-     11 51 71 86 182 189 195 210)
+     8 11 51 71 86 182 189 195 210)
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
     ("Operating System"
