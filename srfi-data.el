@@ -436,7 +436,7 @@
    ;; SRFI 211:
    nil draft "Scheme Macro Libraries"
    ;; SRFI 212:
-   nil draft "Aliases"
+   2021 final "Aliases"
    ;; SRFI 213:
    nil draft "Identifier Properties"
    ;; SRFI 214:
