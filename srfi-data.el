@@ -453,6 +453,8 @@
    nil draft "Define higher-order lambda"
    ;; SRFI 220:
    nil draft "Line directives"
+   ;; SRFI 221:
+   nil draft "Generator/accumulator sub-library"
    ]
   "Table of all known SRFI documents.")
 
@@ -478,7 +480,7 @@
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
-     178 179 182 184 185 189 195 196 208 209 214 217)
+     178 179 182 184 185 189 195 196 208 209 214 217 221)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
