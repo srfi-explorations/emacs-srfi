@@ -227,8 +227,11 @@ If this function is non-nil, then it is used instead of
 (defun srfi-list ()
   "Show the *SRFI* buffer."
   (interactive)
-  (unless (eq (current-buffer) (get-buffer "*SRFI*"))
-    (switch-to-buffer-other-window "*SRFI*"))
+  (let ((old (get-buffer "*SRFI*")))
+    (unless (and old (eq old (current-buffer)))
+      (switch-to-buffer-other-window (get-buffer-create "*SRFI*")))
+    (unless old
+      (setq-local default-directory (expand-file-name "~"))))
   (srfi-revert))
 
 ;;;###autoload
