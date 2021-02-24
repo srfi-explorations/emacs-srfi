@@ -428,7 +428,7 @@
    ;; SRFI 207:
    2020 final "String-notated bytevectors"
    ;; SRFI 208:
-   nil draft "NaN procedures"
+   2021 final "NaN procedures"
    ;; SRFI 209:
    2020 final "Enums and Enum Sets"
    ;; SRFI 210:
