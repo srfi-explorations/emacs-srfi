@@ -57,6 +57,10 @@
 (defvar srfi-source-directory nil
   "A directory containing all the SRFI repos.")
 
+(defun srfi--number-title (srfi-number)
+  "Get the title corresponding to the given SRFI-NUMBER as string."
+  (elt srfi-data (+ 2 (* 3 srfi-number))))
+
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current line."
   (or (get-text-property (point) 'srfi-number)
