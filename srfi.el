@@ -144,7 +144,9 @@ Use `mail-user-agent' for customization."
   "Keymap for `srfi-mode'.")
 
 (define-derived-mode srfi-mode special-mode "SRFI"
-  "Major mode for browsing the SRFI list.
+  "Major mode for browsing Scheme Requests for Implementation.
+
+https://srfi.schemers.org/
 
 \\{srfi-mode-map}"
   (setq-local revert-buffer-function 'srfi-revert)
