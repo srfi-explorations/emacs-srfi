@@ -107,7 +107,7 @@
   (interactive)
   (browse-url (srfi--landing-page-url (srfi--number-on-line))))
 
-(defun srfi-browse-url ()
+(defun srfi-browse-document-url ()
   "Browse the SRFI document on the current line."
   (interactive)
   (browse-url (srfi--document-url (srfi--number-on-line))))
@@ -127,7 +127,7 @@ Use `mail-user-agent' for customization."
 (defvar srfi-mode-map
   (let ((map (make-sparse-keymap)))
     (set-keymap-parent map special-mode-map)
-    (define-key map (kbd "RET") 'srfi-browse-url)
+    (define-key map (kbd "RET") 'srfi-browse-document-url)
     (define-key map (kbd "a") 'srfi-abstract)
     (define-key map (kbd "d") 'srfi-browse-discussion-url)
     (define-key map (kbd "f") 'srfi-source)
