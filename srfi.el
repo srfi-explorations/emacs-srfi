@@ -120,7 +120,7 @@ Use `mail-user-agent' for customization."
   (interactive)
   (compose-mail (srfi--discussion-email-address (srfi--number-on-line))))
 
-(defun srfi-browse-website ()
+(defun srfi-browse-website-url ()
   "Browse the home page of the SRFI specification process."
   (interactive)
   (browse-url "https://srfi.schemers.org/"))
@@ -139,7 +139,7 @@ Use `mail-user-agent' for customization."
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
     (define-key map (kbd "S") 'srfi-fresh-search)
-    (define-key map (kbd "w") 'srfi-browse-website)
+    (define-key map (kbd "w") 'srfi-browse-website-url)
     map)
   "Keymap for `srfi-mode'.")
 
