@@ -276,7 +276,7 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
   "Open directory containing SRFI document in Dired."
   (interactive)
   (unless srfi-source-directory
-    (error "You must set `srfi-source-directory' first."))
+    (error "You must set `srfi-source-directory' first"))
   (dired
    (substitute-in-file-name
     (format "%s/srfi-%d/" srfi-source-directory (srfi--number-on-line)))))
@@ -285,7 +285,7 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
   "Open SRFI document."
   (interactive)
   (unless srfi-source-directory
-    (error "You must set `srfi-source-directory' first."))
+    (error "You must set `srfi-source-directory' first"))
   (let ((srfi (srfi--number-on-line)))
     (find-file
      (substitute-in-file-name
@@ -295,7 +295,7 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
   "Open SRFI abstract document."
   (interactive)
   (unless srfi-abstract-directory
-    (error "You must set `srfi-abstract-directory' first."))
+    (error "You must set `srfi-abstract-directory' first"))
   (find-file
    (substitute-in-file-name
     (format "%s/%d.html" srfi-abstract-directory (srfi--number-on-line)))))
