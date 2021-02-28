@@ -122,7 +122,9 @@
 
 Use `mail-user-agent' for customization."
   (interactive)
-  (compose-mail (srfi--discussion-email-address (srfi--number-on-line))))
+  (let ((number (srfi--number-on-line)))
+    (compose-mail (srfi--discussion-email-address number)
+                  (srfi--number-title number))))
 
 (defun srfi-browse-website-url ()
   "Browse the home page of the SRFI specification process."
