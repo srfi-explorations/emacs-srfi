@@ -1,6 +1,7 @@
 ;;; srfi.el --- Scheme Requests for Implementation browser -*- lexical-binding: t -*-
 ;;
-;; Copyright 2019, 2020 Lassi Kortela
+;; Copyright 2019, 2020, 2021 Lassi Kortela
+;; Copyright 2020 Arthur A. Gleckler
 ;; SPDX-License-Identifier: MIT
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/srfi-explorations/emacs-srfi
