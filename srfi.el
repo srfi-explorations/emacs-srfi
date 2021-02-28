@@ -122,10 +122,12 @@ If this function is non-nil, then it is used instead of
   (interactive)
   (srfi--do-browse-url (srfi--document-url (srfi--number-on-line))))
 
-(defun srfi-send-mail ()
-  "Send an email to the mailing list of the SRFI on the current line."
+(defun srfi-compose-mail ()
+  "Write an email to the mailing list of the SRFI on the current line.
+
+Use `mail-user-agent' for customization."
   (interactive)
-  (mail nil (srfi--discussion-email-address (srfi--number-on-line))))
+  (compose-mail (srfi--discussion-email-address (srfi--number-on-line))))
 
 (defun srfi-browse-website ()
   "Browse the home page of the SRFI specification process."
@@ -142,7 +144,7 @@ If this function is non-nil, then it is used instead of
     (define-key map (kbd "j") 'srfi-dired)
     (define-key map (kbd "k") 'srfi-keyword)
     (define-key map (kbd "l") 'srfi-browse-landing-page-url)
-    (define-key map (kbd "m") 'srfi-send-mail)
+    (define-key map (kbd "m") 'srfi-compose-mail)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
     (define-key map (kbd "s") 'srfi)
     (define-key map (kbd "S") 'srfi-fresh-search)
