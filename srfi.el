@@ -162,7 +162,7 @@ If this function is non-nil, then it is used instead of
                      "Try M-x srfi."))))
 
 (defun srfi--reverse-iota (count)
-  "Internal function to return the integers 0..COUNT-1 as a list."
+  "Internal function to return the integers 0 below COUNT as a list."
   (let ((n 0) (ns '()))
     (while (< n count)
       (push n ns)
