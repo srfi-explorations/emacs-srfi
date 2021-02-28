@@ -143,7 +143,7 @@ Use `mail-user-agent' for customization."
     (define-key map (kbd "l") 'srfi-browse-landing-page-url)
     (define-key map (kbd "m") 'srfi-compose-mail)
     (define-key map (kbd "r") 'srfi-browse-repository-url)
-    (define-key map (kbd "s") 'srfi)
+    (define-key map (kbd "s") 'srfi-search)
     (define-key map (kbd "S") 'srfi-fresh-search)
     (define-key map (kbd "w") 'srfi-browse-website-url)
     map)
@@ -236,7 +236,7 @@ https://srfi.schemers.org/
   (srfi-revert))
 
 ;;;###autoload
-(defun srfi ()
+(defun srfi-search ()
   "Show the *SRFI* buffer and live-narrow it from the minibuffer."
   (interactive)
   (srfi-list)
@@ -245,6 +245,10 @@ https://srfi.schemers.org/
                            nil 'local))
     (setq srfi-narrow-query
           (regexp-quote (read-string "SRFI: " srfi-narrow-query)))))
+
+
+;;;###autoload
+(defalias 'srfi 'srfi-search)
 
 ;;;###autoload
 (defun srfi-jump (number)
@@ -261,7 +265,7 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
   "Show the *SRFI* buffer and live-narrow it from scratch."
   (interactive)
   (setq srfi-narrow-query "")
-  (srfi))
+  (srfi-search))
 
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
