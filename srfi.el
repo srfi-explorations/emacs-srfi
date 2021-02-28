@@ -54,12 +54,6 @@
 (defvar srfi-source-directory nil
   "A directory containing all the SRFI repos.")
 
-(defvar srfi-browser-function nil
-  "Web browser used to open SRFI-related pages.
-
-If this function is non-nil, then it is used instead of
-`browse-url-browser-function' when calling `browse-url'.")
-
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current line."
   (or (get-text-property (point) 'srfi-number)
@@ -96,31 +90,25 @@ If this function is non-nil, then it is used instead of
   (format "https://srfi.schemers.org/srfi-%d/srfi-%d.html"
           srfi-number srfi-number))
 
-(defun srfi--do-browse-url (url)
-  "Internal helper to open URL in the web browser chosen for SRFI."
-  (let ((browse-url-browser-function (or srfi-browser-function
-                                         browse-url-browser-function)))
-    (browse-url url)))
-
 (defun srfi-browse-repository-url ()
   "Browse version control repository of the SRFI on the current line."
   (interactive)
-  (srfi--do-browse-url (srfi--repository-url (srfi--number-on-line))))
+  (browse-url (srfi--repository-url (srfi--number-on-line))))
 
 (defun srfi-browse-discussion-url ()
   "Browse mailing list archive of the SRFI on the current line."
   (interactive)
-  (srfi--do-browse-url (srfi--discussion-url (srfi--number-on-line))))
+  (browse-url (srfi--discussion-url (srfi--number-on-line))))
 
 (defun srfi-browse-landing-page-url ()
   "Browse landing page of the SRFI on the current line."
   (interactive)
-  (srfi--do-browse-url (srfi--landing-page-url (srfi--number-on-line))))
+  (browse-url (srfi--landing-page-url (srfi--number-on-line))))
 
 (defun srfi-browse-url ()
   "Browse the SRFI document on the current line."
   (interactive)
-  (srfi--do-browse-url (srfi--document-url (srfi--number-on-line))))
+  (browse-url (srfi--document-url (srfi--number-on-line))))
 
 (defun srfi-compose-mail ()
   "Write an email to the mailing list of the SRFI on the current line.
@@ -132,7 +120,7 @@ Use `mail-user-agent' for customization."
 (defun srfi-browse-website ()
   "Browse the home page of the SRFI specification process."
   (interactive)
-  (srfi--do-browse-url "https://srfi.schemers.org/"))
+  (browse-url "https://srfi.schemers.org/"))
 
 (defvar srfi-mode-map
   (let ((map (make-sparse-keymap)))
