@@ -450,7 +450,7 @@
    ;; SRFI 218:
    2021 withdrawn "Unicode Numerals"
    ;; SRFI 219:
-   nil draft "Define higher-order lambda"
+   2021 final "Define higher-order lambda"
    ;; SRFI 220:
    nil draft "Line directives"
    ;; SRFI 221:
