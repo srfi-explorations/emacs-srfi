@@ -452,7 +452,7 @@
    ;; SRFI 219:
    2021 final "Define higher-order lambda"
    ;; SRFI 220:
-   nil draft "Line directives"
+   2021 withdrawn "Line directives"
    ;; SRFI 221:
    nil draft "Generator/accumulator sub-library"
    ;; SRFI 222:
