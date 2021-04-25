@@ -57,6 +57,15 @@
 (defvar srfi-source-directory nil
   "A directory containing all the SRFI repos.")
 
+(defun srfi--parse-number (string)
+  "Internal function to parse a SRFI number from STRING.
+
+Strict rules: base 10, no leading zeros, no whitespace."
+  (save-match-data
+    (if (string= string "0") 0
+        (and (string-match "^[1-9][0-9]*$" string)
+             (string-to-number string 10)))))
+
 (defun srfi--number-title (srfi-number)
   "Get the title corresponding to the given SRFI-NUMBER as string."
   (elt srfi-data (+ 2 (* 3 srfi-number))))
@@ -214,15 +223,31 @@ https://srfi.schemers.org/
                 (insert line)
                 (let ((end (point)))
                   (put-text-property beg end 'srfi-number number)))))
-          (srfi--goto-first-srfi))))))
+          (srfi--goto-first-srfi)
+          regexp)))))
 
-(defun srfi--narrow-minibuffer (&rest _ignored)
-  "Internal function to narrow the *SRFI* buffer."
-  (srfi--narrow-to-regexp (regexp-quote (minibuffer-contents))))
+(defun srfi--narrow-to-string (string)
+  "Internal function to narrow the *SRFI* buffer to STRING."
+  (srfi--narrow-to-regexp (regexp-quote string)))
+
+(defun srfi--narrow-to-number (number)
+  "Internal function to narrow *SRFI* buffer to full or partial SRFI NUMBER."
+  (srfi--narrow-to-regexp
+   (if (and (integerp number) (>= number 0))
+       (concat "^SRFI +[0-9]*" (number-to-string number) "[0-9]*:")
+       "")))
+
+(defun srfi--narrow-to-string-minibuffer (&rest _ignored)
+  "Internal function to narrow the *SRFI* buffer based on minibuffer."
+  (srfi--narrow-to-string (minibuffer-contents)))
+
+(defun srfi--narrow-to-number-minibuffer (&rest _ignored)
+  "Internal function to narrow the *SRFI* buffer based on minibuffer."
+  (srfi--narrow-to-number (srfi--parse-number (minibuffer-contents))))
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (srfi--narrow-to-regexp (regexp-quote srfi-narrow-query)))
+  (srfi--narrow-to-string srfi-narrow-query))
 
 ;;;###autoload
 (defun srfi-list ()
@@ -236,16 +261,18 @@ https://srfi.schemers.org/
   (srfi-revert))
 
 ;;;###autoload
-(defun srfi-search ()
-  "Show the *SRFI* buffer and live-narrow it from the minibuffer."
-  (interactive)
-  (srfi-list)
-  (minibuffer-with-setup-hook
-      (lambda () (add-hook 'after-change-functions #'srfi--narrow-minibuffer
-                           nil 'local))
-    (setq srfi-narrow-query
-          (regexp-quote (read-string "SRFI: " srfi-narrow-query)))))
+(defun srfi-search (query)
+  "Show the *SRFI* buffer and live-narrow it from the minibuffer.
 
+When called from Emacs Lisp code, QUERY is the string to narrow to."
+  (interactive
+   (minibuffer-with-setup-hook
+       (lambda () (add-hook 'after-change-functions
+                            #'srfi--narrow-to-string-minibuffer
+                            nil 'local))
+     (srfi-list)
+     (list (read-string "SRFI: " srfi-narrow-query))))
+  (srfi--narrow-to-string (setq srfi-narrow-query query)))
 
 ;;;###autoload
 (defalias 'srfi 'srfi-search)
@@ -255,17 +282,22 @@ https://srfi.schemers.org/
   "Jump to srfi NUMBER.
 
 NUMBER is supplied as a prefix argument or read from the minibuffer."
-  (interactive "NSRFI: ")
-  (srfi-list)
-  (setq srfi-narrow-keyword nil)
-  (setq srfi-narrow-query "")
-  (srfi--narrow-to-regexp (concat "\\<" (number-to-string number) "\\>")))
+  (interactive
+   (minibuffer-with-setup-hook
+       (lambda () (add-hook 'after-change-functions
+                            #'srfi--narrow-to-number-minibuffer
+                            nil 'local))
+     (setq srfi-narrow-keyword nil srfi-narrow-query "")
+     (srfi-list)
+     (list (srfi--parse-number (read-string "SRFI: " srfi-narrow-query)))))
+  (setq srfi-narrow-keyword nil srfi-narrow-query "")
+  (srfi--narrow-to-number number))
 
 (defun srfi-fresh-search ()
   "Show the *SRFI* buffer and live-narrow it from scratch."
   (interactive)
   (setq srfi-narrow-query "")
-  (srfi-search))
+  (call-interactively #'srfi-search))
 
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
