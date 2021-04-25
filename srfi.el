@@ -246,15 +246,10 @@ https://srfi.schemers.org/
 
 (defun srfi--narrow-to-number (number)
   "Internal function to narrow *SRFI* buffer to full or partial SRFI NUMBER."
-  (let ((regexp
-         (srfi--narrow-to-regexp
-          (if (and (integerp number) (>= number 0))
-              (concat "^SRFI +"
-                      (regexp-quote (number-to-string number))
-                      "[0-9]*:")
-              ""))))
-    (srfi--goto-number number)
-    regexp))
+  (srfi--narrow-to-regexp
+   (if (and (integerp number) (>= number 0))
+       (concat "^SRFI +" (regexp-quote (number-to-string number)) "[0-9]*:")
+     "")))
 
 (defun srfi--narrow-to-number-or-string (query)
   (let ((number (if (stringp query) (srfi--parse-number query) query)))
@@ -271,7 +266,9 @@ https://srfi.schemers.org/
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (srfi--narrow-to-number-or-string srfi-narrow-query) )
+  (srfi--narrow-to-number-or-string srfi-narrow-query)
+  (when (numberp srfi-narrow-query)
+    (srfi--goto-number srfi-narrow-query)))
 
 ;;;###autoload
 (defun srfi-list ()
