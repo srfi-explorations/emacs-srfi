@@ -294,7 +294,7 @@ number.  The number can be passed as an integer or a string."
                             nil 'local))
      (srfi-list)
      (list (read-string "SRFI: " srfi-narrow-query))))
-  (setq srfi-narrow-query query)
+  (setq srfi-narrow-query (or (srfi--parse-number query) query))
   (srfi-list))
 
 (defun srfi-fresh-search ()
