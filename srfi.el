@@ -293,7 +293,10 @@ number.  The number can be passed as an integer or a string."
                             #'srfi--narrow-minibuffer
                             nil 'local))
      (srfi-list)
-     (list (read-string "SRFI: " srfi-narrow-query))))
+     (list (read-string "SRFI: "
+                        (if (numberp srfi-narrow-query)
+                            (number-to-string srfi-narrow-query)
+                            srfi-narrow-query)))))
   (setq srfi-narrow-query (or (srfi--parse-number query) query))
   (srfi-list))
 
