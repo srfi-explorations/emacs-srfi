@@ -83,6 +83,20 @@ Strict rules: base 10, no leading zeros, no whitespace."
   (goto-char (next-single-property-change
               (point-min) 'srfi-number nil (point-max))))
 
+(defun srfi--goto-number (number)
+  "Go to line of SRFI with the given NUMBER."
+  (let* ((buffer (get-buffer "*SRFI*"))
+         (window (and buffer (get-buffer-window buffer))))
+    (when window
+      (with-selected-window window
+        (let ((here (point-min)) (number-here nil))
+          (while (and (not (equal number number-here))
+                      (setq here (next-single-property-change
+                                  here 'srfi-number nil (point-max))))
+            (goto-char here)
+            (setq number-here (get-text-property here 'srfi-number)))
+          (when (equal number number-here) number))))))
+
 (defun srfi--repository-url (srfi-number)
   "Get the web URL for the version control repository of SRFI-NUMBER."
   (format "https://github.com/scheme-requests-for-implementation/srfi-%d"
@@ -295,7 +309,8 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
      (list (srfi--parse-number
             (read-string "SRFI number: " srfi-narrow-query)))))
   (setq srfi-narrow-keyword nil srfi-narrow-query "")
-  (srfi--narrow-to-number number))
+  (srfi--narrow-to-number number)
+  (srfi--goto-number number))
 
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
