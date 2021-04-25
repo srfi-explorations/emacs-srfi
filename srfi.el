@@ -274,8 +274,11 @@ When called from Emacs Lisp code, QUERY is the string to narrow to."
      (list (read-string "SRFI: " srfi-narrow-query))))
   (srfi--narrow-to-string (setq srfi-narrow-query query)))
 
-;;;###autoload
-(defalias 'srfi 'srfi-search)
+(defun srfi-fresh-search ()
+  "Show the *SRFI* buffer and live-narrow it from scratch."
+  (interactive)
+  (setq srfi-narrow-query "")
+  (call-interactively #'srfi-search))
 
 ;;;###autoload
 (defun srfi-jump (number)
@@ -292,12 +295,6 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
      (list (srfi--parse-number (read-string "SRFI: " srfi-narrow-query)))))
   (setq srfi-narrow-keyword nil srfi-narrow-query "")
   (srfi--narrow-to-number number))
-
-(defun srfi-fresh-search ()
-  "Show the *SRFI* buffer and live-narrow it from scratch."
-  (interactive)
-  (setq srfi-narrow-query "")
-  (call-interactively #'srfi-search))
 
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
@@ -336,6 +333,9 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
   (find-file
    (substitute-in-file-name
     (format "%s/%d.html" srfi-abstract-directory (srfi--number-on-line)))))
+
+;;;###autoload
+(defalias 'srfi 'srfi-search)
 
 (provide 'srfi)
 
