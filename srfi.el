@@ -248,7 +248,7 @@ https://srfi.schemers.org/
   "Internal function to narrow *SRFI* buffer to full or partial SRFI NUMBER."
   (srfi--narrow-to-regexp
    (if (and (integerp number) (>= number 0))
-       (concat "^SRFI +[0-9]*" (number-to-string number) "[0-9]*:")
+       (concat "^SRFI +" (regexp-quote (number-to-string number)) "[0-9]*:")
        "")))
 
 (defun srfi--narrow-to-string-minibuffer (&rest _ignored)
