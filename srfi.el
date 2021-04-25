@@ -246,22 +246,32 @@ https://srfi.schemers.org/
 
 (defun srfi--narrow-to-number (number)
   "Internal function to narrow *SRFI* buffer to full or partial SRFI NUMBER."
-  (srfi--narrow-to-regexp
-   (if (and (integerp number) (>= number 0))
-       (concat "^SRFI +" (regexp-quote (number-to-string number)) "[0-9]*:")
-       "")))
+  (let ((regexp
+         (srfi--narrow-to-regexp
+          (if (and (integerp number) (>= number 0))
+              (concat "^SRFI +"
+                      (regexp-quote (number-to-string number))
+                      "[0-9]*:")
+              ""))))
+    (srfi--goto-number number)
+    regexp))
 
-(defun srfi--narrow-to-string-minibuffer (&rest _ignored)
-  "Internal function to narrow the *SRFI* buffer based on minibuffer."
-  (srfi--narrow-to-string (minibuffer-contents)))
+(defun srfi--narrow-to-number-or-string (query)
+  (let ((number (if (stringp query) (srfi--parse-number query) query)))
+    (cond (number
+           (srfi--narrow-to-number number)
+           number)
+          (t
+           (srfi--narrow-to-string query)
+           query))))
 
-(defun srfi--narrow-to-number-minibuffer (&rest _ignored)
+(defun srfi--narrow-minibuffer (&rest _ignored)
   "Internal function to narrow the *SRFI* buffer based on minibuffer."
-  (srfi--narrow-to-number (srfi--parse-number (minibuffer-contents))))
+  (srfi--narrow-to-number-or-string (minibuffer-contents)))
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (srfi--narrow-to-string srfi-narrow-query))
+  (srfi--narrow-to-number-or-string srfi-narrow-query) )
 
 ;;;###autoload
 (defun srfi-list ()
@@ -278,39 +288,23 @@ https://srfi.schemers.org/
 (defun srfi-search (query)
   "Show the *SRFI* buffer and live-narrow it from the minibuffer.
 
-When called from Emacs Lisp code, QUERY is the string to narrow to."
+When called from Emacs Lisp code, QUERY is the string or SRFI
+number.  The number can be passed as an integer or a string."
   (interactive
    (minibuffer-with-setup-hook
        (lambda () (add-hook 'after-change-functions
-                            #'srfi--narrow-to-string-minibuffer
+                            #'srfi--narrow-minibuffer
                             nil 'local))
      (srfi-list)
      (list (read-string "SRFI: " srfi-narrow-query))))
-  (srfi--narrow-to-string (setq srfi-narrow-query query)))
+  (setq srfi-narrow-query query)
+  (srfi-list))
 
 (defun srfi-fresh-search ()
   "Show the *SRFI* buffer and live-narrow it from scratch."
   (interactive)
   (setq srfi-narrow-query "")
   (call-interactively #'srfi-search))
-
-;;;###autoload
-(defun srfi-jump (number)
-  "Jump to srfi NUMBER.
-
-NUMBER is supplied as a prefix argument or read from the minibuffer."
-  (interactive
-   (minibuffer-with-setup-hook
-       (lambda () (add-hook 'after-change-functions
-                            #'srfi--narrow-to-number-minibuffer
-                            nil 'local))
-     (setq srfi-narrow-keyword nil srfi-narrow-query "")
-     (srfi-list)
-     (list (srfi--parse-number
-            (read-string "SRFI number: " srfi-narrow-query)))))
-  (setq srfi-narrow-keyword nil srfi-narrow-query "")
-  (srfi--narrow-to-number number)
-  (srfi--goto-number number))
 
 (defun srfi-keyword (keyword)
   "Show the *SRFI* buffer and narrow it to a paricular KEYWORD."
