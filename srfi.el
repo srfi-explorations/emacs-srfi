@@ -292,7 +292,8 @@ NUMBER is supplied as a prefix argument or read from the minibuffer."
                             nil 'local))
      (setq srfi-narrow-keyword nil srfi-narrow-query "")
      (srfi-list)
-     (list (srfi--parse-number (read-string "SRFI: " srfi-narrow-query)))))
+     (list (srfi--parse-number
+            (read-string "SRFI number: " srfi-narrow-query)))))
   (setq srfi-narrow-keyword nil srfi-narrow-query "")
   (srfi--narrow-to-number number))
 
