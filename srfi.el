@@ -46,7 +46,10 @@
      (2 font-lock-comment-face))))
 
 (defvar srfi-narrow-query ""
-  "The current narrowing text in effect in the *SRFI* buffer.")
+  "The current narrowing text in effect in the *SRFI* buffer.
+
+This is always a string, but if the string consists entirely of
+decimal digits, it's used to filter SRFI numbers.")
 
 (defvar srfi-narrow-keyword nil
   "The current keyword being shown in the *SRFI* buffer.")
@@ -252,7 +255,7 @@ https://srfi.schemers.org/
      "")))
 
 (defun srfi--narrow-to-number-or-string (query)
-  (let ((number (if (stringp query) (srfi--parse-number query) query)))
+  (let ((number (srfi--parse-number query)))
     (cond (number
            (srfi--narrow-to-number number)
            number)
@@ -266,9 +269,9 @@ https://srfi.schemers.org/
 
 (defun srfi-revert (&optional _arg _noconfirm)
   "(Re-)initialize the *SRFI* buffer."
-  (srfi--narrow-to-number-or-string srfi-narrow-query)
-  (when (numberp srfi-narrow-query)
-    (srfi--goto-number srfi-narrow-query)))
+  (let ((parsed-query (srfi--narrow-to-number-or-string srfi-narrow-query)))
+    (when (numberp parsed-query)
+      (srfi--goto-number parsed-query))))
 
 ;;;###autoload
 (defun srfi-list ()
@@ -293,11 +296,8 @@ number.  The number can be passed as an integer or a string."
                             #'srfi--narrow-minibuffer
                             nil 'local))
      (srfi-list)
-     (list (read-string "SRFI: "
-                        (if (numberp srfi-narrow-query)
-                            (number-to-string srfi-narrow-query)
-                            srfi-narrow-query)))))
-  (setq srfi-narrow-query (or (srfi--parse-number query) query))
+     (list (read-string "SRFI: " srfi-narrow-query))))
+  (setq srfi-narrow-query query)
   (srfi-list))
 
 (defun srfi-fresh-search ()
