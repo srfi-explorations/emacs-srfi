@@ -246,7 +246,7 @@ https://srfi.schemers.org/
           regexp)))))
 
 (defun srfi--narrow-to-string (string)
-  "Internal function to narrow the *SRFI* buffer to STRING."
+  "Internal function to narrow *SRFI* buffer to STRING."
   (srfi--narrow-to-regexp (regexp-quote string)))
 
 (defun srfi--narrow-to-number (number)
@@ -257,6 +257,7 @@ https://srfi.schemers.org/
      "")))
 
 (defun srfi--narrow-to-number-or-string (query)
+  "Internal function to narrow *SRFI* buffer to QUERY (digits or title)."
   (let ((number (srfi--parse-number query)))
     (cond (number
            (srfi--narrow-to-number number)
