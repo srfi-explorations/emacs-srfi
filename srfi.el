@@ -69,9 +69,9 @@ Strict rules: base 10, no leading zeros, no whitespace."
         (and (string-match "^[1-9][0-9]*$" string)
              (string-to-number string 10)))))
 
-(defun srfi--number-title (srfi-number)
-  "Get the title corresponding to the given SRFI-NUMBER as string."
-  (elt srfi-data (+ 2 (* 3 srfi-number))))
+(defun srfi--number-title (number)
+  "Get the title corresponding to the given SRFI NUMBER as string."
+  (elt srfi-data (+ 2 (* 3 number))))
 
 (defun srfi--number-on-line ()
   "Get the number of the SRFI on the current line."
@@ -87,7 +87,7 @@ Strict rules: base 10, no leading zeros, no whitespace."
               (point-min) 'srfi-number nil (point-max))))
 
 (defun srfi--goto-number (number)
-  "Go to line of SRFI with the given NUMBER."
+  "Go to line of SRFI NUMBER."
   (let* ((buffer (get-buffer "*SRFI*"))
          (window (and buffer (get-buffer-window buffer))))
     (when window
@@ -102,48 +102,48 @@ Strict rules: base 10, no leading zeros, no whitespace."
             (setq number-here (get-text-property here 'srfi-number)))
           (when (equal number number-here) number))))))
 
-(defun srfi--repository-url (srfi-number)
-  "Get the web URL for the version control repository of SRFI-NUMBER."
+(defun srfi--repository-url (number)
+  "Get the web URL for the version control repository of SRFI NUMBER."
   (format "https://github.com/scheme-requests-for-implementation/srfi-%d"
-          srfi-number))
+          number))
 
-(defun srfi--discussion-url (srfi-number)
-  "Get the web URL for the mailing list archive of SRFI-NUMBER."
-  (format "https://srfi-email.schemers.org/srfi-%d/" srfi-number))
+(defun srfi--discussion-url (number)
+  "Get the web URL for the mailing list archive of SRFI NUMBER."
+  (format "https://srfi-email.schemers.org/srfi-%d/" number))
 
-(defun srfi--discussion-email-address (srfi-number)
-  "Get the email address for the mailing list of SRFI-NUMBER."
-  (format "srfi-%d@srfi.schemers.org" srfi-number))
+(defun srfi--discussion-email-address (number)
+  "Get the email address for the mailing list of SRFI NUMBER."
+  (format "srfi-%d@srfi.schemers.org" number))
 
-(defun srfi--landing-page-url (srfi-number)
-  "Get the web URL for the landing page of SRFI-NUMBER."
+(defun srfi--landing-page-url (number)
+  "Get the web URL for the landing page of SRFI NUMBER."
   (format "https://srfi.schemers.org/srfi-%d/"
-          srfi-number))
+          number))
 
-(defun srfi--document-url (srfi-number)
-  "Get the web URL for the SRFI document SRFI-NUMBER."
+(defun srfi--document-url (number)
+  "Get the web URL for the SRFI document NUMBER."
   (format "https://srfi.schemers.org/srfi-%d/srfi-%d.html"
-          srfi-number srfi-number))
+          number number))
 
-(defun srfi-browse-repository-url ()
-  "Browse version control repository of the SRFI on the current line."
-  (interactive)
-  (browse-url (srfi--repository-url (srfi--number-on-line))))
+(defun srfi-browse-repository-url (number)
+  "Browse SRFI NUMBER version control repository."
+  (interactive (list (srfi--number-on-line)))
+  (browse-url (srfi--repository-url number)))
 
-(defun srfi-browse-discussion-url ()
-  "Browse mailing list archive of the SRFI on the current line."
-  (interactive)
-  (browse-url (srfi--discussion-url (srfi--number-on-line))))
+(defun srfi-browse-discussion-url (number)
+  "Browse SRFI NUMBER mailing list archive."
+  (interactive (list (srfi--number-on-line)))
+  (browse-url (srfi--discussion-url number)))
 
-(defun srfi-browse-landing-page-url ()
-  "Browse landing page of the SRFI on the current line."
-  (interactive)
-  (browse-url (srfi--landing-page-url (srfi--number-on-line))))
+(defun srfi-browse-landing-page-url (number)
+  "Browse SRFI NUMBER landing page."
+  (interactive (list (srfi--number-on-line)))
+  (browse-url (srfi--landing-page-url number)))
 
-(defun srfi-browse-document-url ()
-  "Browse the SRFI document on the current line."
-  (interactive)
-  (browse-url (srfi--document-url (srfi--number-on-line))))
+(defun srfi-browse-document-url (number)
+  "Browse SRFI NUMBER document."
+  (interactive (list (srfi--number-on-line)))
+  (browse-url (srfi--document-url number)))
 
 (defun srfi-compose-mail ()
   "Write an email to the mailing list of the SRFI on the current line.
@@ -207,16 +207,16 @@ https://srfi.schemers.org/
         (let* ((inhibit-read-only t)
                (case-fold-search t)
                (srfi-count (truncate (length srfi-data) 3))
-               (srfi-numbers (if srfi-narrow-keyword
-                                 (reverse (cdr (assoc srfi-narrow-keyword
-                                                      srfi-data-keywords)))
-                                 (srfi--reverse-iota srfi-count))))
+               (numbers (if srfi-narrow-keyword
+                            (reverse (cdr (assoc srfi-narrow-keyword
+                                                 srfi-data-keywords)))
+                          (srfi--reverse-iota srfi-count))))
           (erase-buffer)
           (srfi-mode)
           (insert
            "Scheme Requests for Implementation"
            (if (not srfi-narrow-keyword) ""
-               (concat " (" srfi-narrow-keyword ")"))
+             (concat " (" srfi-narrow-keyword ")"))
            "\n"
            "\n"
            "RET: browse SRFI document | "
@@ -225,7 +225,7 @@ https://srfi.schemers.org/
            "s: search | "
            "w: website\n"
            "\n")
-          (dolist (number srfi-numbers)
+          (dolist (number numbers)
             (let* ((base   (* number 3))
                    (year   (elt srfi-data base))
                    (status (elt srfi-data (+ base 1)))
