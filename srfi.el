@@ -92,11 +92,13 @@ Strict rules: base 10, no leading zeros, no whitespace."
          (window (and buffer (get-buffer-window buffer))))
     (when window
       (with-selected-window window
-        (let ((here (point-min)) (number-here nil))
+        (let* ((prev (point-min)) (here prev) (number-here nil))
           (while (and (not (equal number number-here))
                       (setq here (next-single-property-change
-                                  here 'srfi-number nil (point-max))))
+                                  here 'srfi-number nil (point-max)))
+                      (< prev here))
             (goto-char here)
+            (setq prev here)
             (setq number-here (get-text-property here 'srfi-number)))
           (when (equal number number-here) number))))))
 
