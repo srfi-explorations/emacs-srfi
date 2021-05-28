@@ -446,7 +446,7 @@
    ;; SRFI 216:
    2020 final "SICP Prerequisites (Portable)"
    ;; SRFI 217:
-   nil draft "Integer Sets"
+   2021 final "Integer Sets"
    ;; SRFI 218:
    2021 withdrawn "Unicode Numerals"
    ;; SRFI 219:
@@ -454,7 +454,7 @@
    ;; SRFI 220:
    2021 withdrawn "Line directives"
    ;; SRFI 221:
-   nil draft "Generator/accumulator sub-library"
+   2021 final "Generator/accumulator sub-library"
    ;; SRFI 222:
    nil draft "Compound Objects"
    ;; SRFI 223:
