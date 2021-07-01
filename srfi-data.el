@@ -460,7 +460,7 @@
    ;; SRFI 223:
    nil draft "Generalized binary search procedures"
    ;; SRFI 224:
-   nil draft "Integer Mappings"
+   2021 final "Integer Mappings"
    ]
   "Table of all known SRFI documents.")
 
