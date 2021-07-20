@@ -462,7 +462,7 @@
    ;; SRFI 224:
    2021 final "Integer Mappings"
    ;; SRFI 225:
-   nil draft "Integer Mappings"
+   nil draft "Dictionaries"
    ]
   "Table of all known SRFI documents.")
 
