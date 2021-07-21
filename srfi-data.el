@@ -456,7 +456,7 @@
    ;; SRFI 221:
    2021 final "Generator/accumulator sub-library"
    ;; SRFI 222:
-   nil draft "Compound Objects"
+   2021 final "Compound Objects"
    ;; SRFI 223:
    nil draft "Generalized binary search procedures"
    ;; SRFI 224:
