@@ -458,7 +458,7 @@
    ;; SRFI 222:
    2021 final "Compound Objects"
    ;; SRFI 223:
-   nil draft "Generalized binary search procedures"
+   2021 final "Generalized binary search procedures"
    ;; SRFI 224:
    2021 final "Integer Mappings"
    ;; SRFI 225:
