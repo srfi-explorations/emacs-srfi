@@ -464,7 +464,7 @@
    ;; SRFI 225:
    nil draft "Dictionaries"
    ;; SRFI 226:
-   nil draft "Control Operators"
+   nil draft "Control Features"
    ]
   "Table of all known SRFI documents.")
 
