@@ -463,6 +463,8 @@
    2021 final "Integer Mappings"
    ;; SRFI 225:
    nil draft "Dictionaries"
+   ;; SRFI 226:
+   nil draft "Control Operators"
    ]
   "Table of all known SRFI documents.")
 
@@ -480,9 +482,9 @@
     ("Concurrency"
      18 21)
     ("Continuations"
-     157)
+     157 226)
     ("Control Flow"
-     2 12 23 42 61 87 202)
+     2 12 23 42 61 87 202 226)
     ("Data Structure"
      1 3 4 9 13 14 19 25 33 40 41 43 44 45 47 52
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
