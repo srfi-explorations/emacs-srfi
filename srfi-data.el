@@ -465,6 +465,8 @@
    nil draft "Dictionaries"
    ;; SRFI 226:
    nil draft "Control Features"
+   ;; SRFI 227:
+   nil draft "Optional Arguments"
    ]
   "Table of all known SRFI documents.")
 
@@ -476,7 +478,7 @@
      17)
     ("Binding"
      2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
-     219)
+     219 227)
     ("Comparison"
      67 85 114 128 162)
     ("Concurrency"
