@@ -467,6 +467,10 @@
    nil draft "Control Features"
    ;; SRFI 227:
    nil draft "Optional Arguments"
+   ;; SRFI 228:
+   nil draft "A further comparator library"
+   ;; SRFI 229:
+   nil draft "Tagged Procedures"
    ]
   "Table of all known SRFI documents.")
 
@@ -480,7 +484,7 @@
      2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
      219 227)
     ("Comparison"
-     67 85 114 128 162)
+     67 85 114 128 162 228)
     ("Concurrency"
      18 21)
     ("Continuations"
@@ -492,7 +496,8 @@
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
-     178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225)
+     178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
+     229)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
