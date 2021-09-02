@@ -471,6 +471,8 @@
    nil draft "A further comparator library"
    ;; SRFI 229:
    nil draft "Tagged Procedures"
+   ;; SRFI 230:
+   nil draft "Atomic Operations"
    ]
   "Table of all known SRFI documents.")
 
@@ -486,7 +488,7 @@
     ("Comparison"
      67 85 114 128 162 228)
     ("Concurrency"
-     18 21)
+     18 21 230)
     ("Continuations"
      157 226)
     ("Control Flow"
