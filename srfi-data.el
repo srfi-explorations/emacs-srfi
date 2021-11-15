@@ -472,7 +472,7 @@
    ;; SRFI 229:
    nil draft "Tagged Procedures"
    ;; SRFI 230:
-   nil draft "Atomic Operations"
+   2021 final "Atomic Operations"
    ]
   "Table of all known SRFI documents.")
 
