@@ -470,7 +470,7 @@
    ;; SRFI 228:
    nil draft "A further comparator library"
    ;; SRFI 229:
-   nil draft "Tagged Procedures"
+   2021 final "Tagged Procedures"
    ;; SRFI 230:
    2021 final "Atomic Operations"
    ]
