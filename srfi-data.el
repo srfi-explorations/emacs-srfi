@@ -466,7 +466,7 @@
    ;; SRFI 226:
    nil draft "Control Features"
    ;; SRFI 227:
-   nil draft "Optional Arguments"
+   2021 final "Optional Arguments"
    ;; SRFI 228:
    nil draft "A further comparator library"
    ;; SRFI 229:
