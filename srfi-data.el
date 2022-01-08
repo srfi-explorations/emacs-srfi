@@ -473,6 +473,8 @@
    2021 final "Tagged Procedures"
    ;; SRFI 230:
    2021 final "Atomic Operations"
+   ;; SRFI 231:
+   nil draft "Nonempty Intervals and Generalized Arrays (Updated^2)"
    ]
   "Table of all known SRFI documents.")
 
@@ -499,7 +501,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229)
+     229 231)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
@@ -522,7 +524,7 @@
     ("Multiple-Value Returns"
      8 11 51 71 86 182 189 195 210)
     ("Numbers"
-     4 60 63 70 73 77 94 122 141 143 144 151 169 179 208)
+     4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231)
     ("Operating System"
      6 22 37 50 98 103 104 112 138 170 176 193 198 199 205 215)
     ("Optimization"
