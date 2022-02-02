@@ -420,7 +420,7 @@
    ;; SRFI 203:
    2020 final "A Simple Picture Language in the Style of SICP"
    ;; SRFI 204:
-   nil draft "Wright-Cartwright-Shinn Pattern Matcher"
+   2022 withdrawn "Wright-Cartwright-Shinn Pattern Matcher"
    ;; SRFI 205:
    nil draft "POSIX Terminal Fundamentals"
    ;; SRFI 206:
