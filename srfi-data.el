@@ -422,7 +422,7 @@
    ;; SRFI 204:
    2022 withdrawn "Wright-Cartwright-Shinn Pattern Matcher"
    ;; SRFI 205:
-   nil draft "POSIX Terminal Fundamentals"
+   2022 withdrawn "POSIX Terminal Fundamentals"
    ;; SRFI 206:
    2020 final "Auxiliary Syntax Keywords"
    ;; SRFI 207:
