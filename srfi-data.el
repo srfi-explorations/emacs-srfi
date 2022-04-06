@@ -476,7 +476,7 @@
    ;; SRFI 231:
    nil draft "Nonempty Intervals and Generalized Arrays (Updated^2)"
    ;; SRFI 232:
-   nil draft "An advanced currying form"
+   2022 final "Flexible curried procedures"
    ]
   "Table of all known SRFI documents.")
 
@@ -551,7 +551,7 @@
     ("SICP"
      203 216)
     ("Superseded"
-     40 114 121 142 159 186)
+     40 114 121 122 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
      211 212 213 219 232)
