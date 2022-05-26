@@ -474,7 +474,7 @@
    ;; SRFI 230:
    2021 final "Atomic Operations"
    ;; SRFI 231:
-   nil draft "Nonempty Intervals and Generalized Arrays (Updated^2)"
+   nil draft "Intervals and Generalized Arrays (Updated^2)"
    ;; SRFI 232:
    2022 final "Flexible curried procedures"
    ]
