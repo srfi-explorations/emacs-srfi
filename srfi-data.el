@@ -412,7 +412,7 @@
    ;; SRFI 199:
    2020 withdrawn "POSIX errno manipulation"
    ;; SRFI 200:
-   nil draft "Pattern Matching"
+   2022 withdrawn "Pattern Matching"
    ;; SRFI 201:
    2021 final "Syntactic Extensions to the Core Scheme Bindings"
    ;; SRFI 202:
