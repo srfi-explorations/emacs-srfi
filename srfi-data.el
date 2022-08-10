@@ -479,13 +479,15 @@
    2022 final "Flexible curried procedures"
    ;; SRFI 233:
    nil draft "INI files"
+   ;; SRFI 234:
+   nil draft "Topological Sorting"
    ]
   "Table of all known SRFI documents.")
 
 (defconst srfi-data-keywords
   '(
     ("Algorithm"
-     32 95 132)
+     32 95 132 234)
     ("Assignment"
      17)
     ("Binding"
@@ -514,7 +516,7 @@
      0 7 55 96)
     ("I/O"
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
-     159 166 167 168 180 181 183 186 192)
+     159 166 167 168 180 181 183 186 192 233)
     ("Internationalization"
      75 129 218)
     ("Introspection"
@@ -556,7 +558,7 @@
      40 114 121 122 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213 219 232 233)
+     211 212 213 219 232)
     ("Testing"
      64 78)
     ("Type Checking"
