@@ -481,6 +481,8 @@
    nil draft "INI files"
    ;; SRFI 234:
    nil draft "Topological Sorting"
+   ;; SRFI 235:
+   nil draft "Combinators"
    ]
   "Table of all known SRFI documents.")
 
@@ -524,7 +526,7 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187 223)
+     20 31 92 120 123 154 165 172 173 187 223 235)
     ("Modules"
      83 97)
     ("Multiple-Value Returns"
