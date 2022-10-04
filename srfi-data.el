@@ -485,6 +485,8 @@
    nil draft "Combinators"
    ;; SRFI 236:
    nil draft "Evaluating Scheme expressions in an unspecified order"
+   ;; SRFI 237:
+   nil draft "Reconciled Records"
    ]
   "Table of all known SRFI documents.")
 
@@ -511,7 +513,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229 231)
+     229 231 237)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
