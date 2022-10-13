@@ -478,7 +478,7 @@
    ;; SRFI 232:
    2022 final "Flexible curried procedures"
    ;; SRFI 233:
-   nil draft "INI files"
+   2022 final "INI files"
    ;; SRFI 234:
    nil draft "Topological Sorting"
    ;; SRFI 235:
