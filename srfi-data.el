@@ -484,9 +484,11 @@
    ;; SRFI 235:
    nil draft "Combinators"
    ;; SRFI 236:
-   nil draft "Evaluating Scheme expressions in an unspecified order"
+   nil draft "Evaluating expressions in an unspecified order"
    ;; SRFI 237:
    nil draft "Reconciled Records"
+   ;; SRFI 238:
+   nil draft "Codesets"
    ]
   "Table of all known SRFI documents.")
 
@@ -538,7 +540,8 @@
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231)
     ("Operating System"
-     6 22 37 50 98 103 104 112 138 170 176 193 198 199 205 215)
+     6 22 37 50 98 103 104 112 138 170 176 193 198 199 205 215
+     238)
     ("Optimization"
      145)
     ("Parameters"
