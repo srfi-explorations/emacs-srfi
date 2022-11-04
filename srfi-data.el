@@ -489,6 +489,8 @@
    nil draft "Reconciled Records"
    ;; SRFI 238:
    nil draft "Codesets"
+   ;; SRFI 239:
+   nil draft "Destructuring Lists"
    ]
   "Table of all known SRFI documents.")
 
@@ -567,7 +569,7 @@
      40 114 121 122 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213 219 232 236)
+     211 212 213 219 232 236 239)
     ("Testing"
      64 78)
     ("Type Checking"
