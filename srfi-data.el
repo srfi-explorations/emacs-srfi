@@ -486,11 +486,13 @@
    ;; SRFI 236:
    nil draft "Evaluating expressions in an unspecified order"
    ;; SRFI 237:
-   nil draft "Reconciled Records"
+   nil draft "R6RS Records (refined)"
    ;; SRFI 238:
    nil draft "Codesets"
    ;; SRFI 239:
    nil draft "Destructuring Lists"
+   ;; SRFI 240:
+   nil draft "Reconciled Records"
    ]
   "Table of all known SRFI documents.")
 
@@ -569,7 +571,7 @@
      40 114 121 122 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213 219 232 236 239)
+     211 212 213 219 232 236 239 240)
     ("Testing"
      64 78)
     ("Type Checking"
