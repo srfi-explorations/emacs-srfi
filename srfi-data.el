@@ -493,6 +493,8 @@
    nil draft "Destructuring Lists"
    ;; SRFI 240:
    nil draft "Reconciled Records"
+   ;; SRFI 241:
+   nil draft "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ]
   "Table of all known SRFI documents.")
 
@@ -519,7 +521,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229 231 237)
+     229 231 237 240)
     ("Error Handling"
      23 198 199)
     ("Exceptions"
@@ -551,7 +553,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 204)
+     16 200 201 202 204 241)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
@@ -571,7 +573,7 @@
      40 114 121 122 142 159 186)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213 219 232 236 239 240)
+     211 212 213 219 232 236 239 241)
     ("Testing"
      64 78)
     ("Type Checking"
