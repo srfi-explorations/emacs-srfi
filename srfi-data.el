@@ -468,7 +468,7 @@
    ;; SRFI 227:
    2021 final "Optional Arguments"
    ;; SRFI 228:
-   nil draft "A further comparator library"
+   nil draft "Composing Comparators"
    ;; SRFI 229:
    2021 final "Tagged Procedures"
    ;; SRFI 230:
@@ -495,6 +495,8 @@
    nil draft "Reconciled Records"
    ;; SRFI 241:
    nil draft "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
+   ;; SRFI 242:
+   nil draft "The CFG Language"
    ]
   "Table of all known SRFI documents.")
 
@@ -514,7 +516,7 @@
     ("Continuations"
      157 226)
     ("Control Flow"
-     2 12 23 42 61 87 202 226 236)
+     2 12 23 42 61 87 202 226 236 242)
     ("Data Structure"
      1 3 4 9 13 14 19 25 33 40 41 43 44 45 47 52
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
