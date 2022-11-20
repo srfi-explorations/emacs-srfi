@@ -497,6 +497,8 @@
    nil draft "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
    nil draft "The CFG Language"
+   ;; SRFI 243:
+   nil draft "Unreadable Objects"
    ]
   "Table of all known SRFI documents.")
 
@@ -568,7 +570,7 @@
     ("Randomness"
      27 194)
     ("Reader Syntax"
-     10 30 49 58 62 88 105 107 108 109 110 119 163 207 220)
+     10 30 49 58 62 88 105 107 108 109 110 119 163 207 220 243)
     ("SICP"
      203 216)
     ("Superseded"
