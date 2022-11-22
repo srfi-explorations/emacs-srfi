@@ -484,7 +484,7 @@
    ;; SRFI 235:
    nil draft "Combinators"
    ;; SRFI 236:
-   nil draft "Evaluating expressions in an unspecified order"
+   2022 final "Evaluating expressions in an unspecified order"
    ;; SRFI 237:
    nil draft "R6RS Records (refined)"
    ;; SRFI 238:
