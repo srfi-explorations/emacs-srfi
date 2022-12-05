@@ -499,6 +499,8 @@
    nil draft "The CFG Language"
    ;; SRFI 243:
    nil draft "Unreadable Objects"
+   ;; SRFI 244:
+   nil draft "Multiple-value Definitions"
    ]
   "Table of all known SRFI documents.")
 
@@ -510,7 +512,7 @@
      17)
     ("Binding"
      2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
-     219 227)
+     219 227 244)
     ("Comparison"
      67 85 114 128 162 228)
     ("Concurrency"
@@ -546,7 +548,7 @@
     ("Modules"
      83 97)
     ("Multiple-Value Returns"
-     8 11 51 71 86 182 189 195 210)
+     8 11 51 71 86 182 189 195 210 244)
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231)
     ("Operating System"
