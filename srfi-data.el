@@ -468,7 +468,7 @@
    ;; SRFI 227:
    2021 final "Optional Arguments"
    ;; SRFI 228:
-   nil draft "Composing Comparators"
+   2022 final "Composing Comparators"
    ;; SRFI 229:
    2021 final "Tagged Procedures"
    ;; SRFI 230:
