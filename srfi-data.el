@@ -488,7 +488,7 @@
    ;; SRFI 237:
    nil draft "R6RS Records (refined)"
    ;; SRFI 238:
-   nil draft "Codesets"
+   2023 final "Codesets"
    ;; SRFI 239:
    nil draft "Destructuring Lists"
    ;; SRFI 240:
@@ -529,7 +529,7 @@
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
      229 231 237 240)
     ("Error Handling"
-     23 198 199)
+     23 198 199 238)
     ("Exceptions"
      12 34 35 36)
     ("Features"
@@ -540,7 +540,7 @@
     ("Internationalization"
      75 129 218)
     ("Introspection"
-     102 191)
+     102 191 238)
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
@@ -572,14 +572,15 @@
     ("Randomness"
      27 194)
     ("Reader Syntax"
-     10 30 49 58 62 88 105 107 108 109 110 119 163 207 220 243)
+     10 30 49 58 62 88 105 107 108 109 110 119 163 169 207 220
+     243)
     ("SICP"
      203 216)
     ("Superseded"
      40 114 121 122 142 159 186)
     ("Syntax"
-     24 26 46 53 72 93 147 148 149 156 169 188 190 197 201 206
-     211 212 213 219 232 236 239 241)
+     24 26 46 53 72 93 147 148 149 156 188 190 197 201 206 211
+     212 213 219 232 236 239 241)
     ("Testing"
      64 78)
     ("Type Checking"
