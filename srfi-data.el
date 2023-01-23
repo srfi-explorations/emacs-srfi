@@ -490,7 +490,7 @@
    ;; SRFI 238:
    2023 final "Codesets"
    ;; SRFI 239:
-   nil draft "Destructuring Lists"
+   2023 final "Destructuring Lists"
    ;; SRFI 240:
    nil draft "Reconciled Records"
    ;; SRFI 241:
