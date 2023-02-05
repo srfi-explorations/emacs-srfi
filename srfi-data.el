@@ -500,7 +500,7 @@
    ;; SRFI 243:
    nil draft "Unreadable Objects"
    ;; SRFI 244:
-   nil draft "Multiple-value Definitions"
+   2023 final "Multiple-value Definitions"
    ]
   "Table of all known SRFI documents.")
 
