@@ -482,7 +482,7 @@
    ;; SRFI 234:
    nil draft "Topological Sorting"
    ;; SRFI 235:
-   nil draft "Combinators"
+   2023 final "Combinators"
    ;; SRFI 236:
    2022 final "Evaluating expressions in an unspecified order"
    ;; SRFI 237:
