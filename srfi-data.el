@@ -318,7 +318,7 @@
    ;; SRFI 152:
    2017 final "String Library (reduced)"
    ;; SRFI 153:
-   2018 withdrawn "Ordered Sets"
+   nil draft "Ordered Sets"
    ;; SRFI 154:
    2018 final "First-class dynamic extents"
    ;; SRFI 155:
@@ -494,7 +494,7 @@
    ;; SRFI 240:
    nil draft "Reconciled Records"
    ;; SRFI 241:
-   nil draft "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
+   2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
    nil draft "The CFG Language"
    ;; SRFI 243:
