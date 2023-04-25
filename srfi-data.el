@@ -464,7 +464,7 @@
    ;; SRFI 225:
    2022 final "Dictionaries"
    ;; SRFI 226:
-   nil draft "Control Features"
+   2023 final "Control Features"
    ;; SRFI 227:
    2021 final "Optional Arguments"
    ;; SRFI 228:
