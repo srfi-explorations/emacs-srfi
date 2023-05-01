@@ -318,7 +318,7 @@
    ;; SRFI 152:
    2017 final "String Library (reduced)"
    ;; SRFI 153:
-   nil draft "Ordered Sets"
+   2023 final "Ordered Sets"
    ;; SRFI 154:
    2018 final "First-class dynamic extents"
    ;; SRFI 155:
