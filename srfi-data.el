@@ -492,7 +492,7 @@
    ;; SRFI 239:
    2023 final "Destructuring Lists"
    ;; SRFI 240:
-   nil draft "Reconciled Records"
+   2023 final "Reconciled Records"
    ;; SRFI 241:
    2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
