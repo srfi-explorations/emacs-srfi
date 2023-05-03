@@ -486,7 +486,7 @@
    ;; SRFI 236:
    2022 final "Evaluating expressions in an unspecified order"
    ;; SRFI 237:
-   nil draft "R6RS Records (refined)"
+   2023 final "R6RS Records (refined)"
    ;; SRFI 238:
    2023 final "Codesets"
    ;; SRFI 239:
