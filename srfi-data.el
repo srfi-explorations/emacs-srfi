@@ -262,7 +262,7 @@
    ;; SRFI 124:
    2015 final "Ephemerons"
    ;; SRFI 125:
-   2015 final "Intermediate hash tables"
+   2016 final "Intermediate hash tables"
    ;; SRFI 126:
    2016 final "R6RS-based hashtables"
    ;; SRFI 127:
@@ -320,13 +320,13 @@
    ;; SRFI 153:
    2023 final "Ordered Sets"
    ;; SRFI 154:
-   2018 final "First-class dynamic extents"
+   2023 withdrawn "First-class dynamic extents"
    ;; SRFI 155:
-   2018 final "Promises"
+   2023 withdrawn "Promises"
    ;; SRFI 156:
    2017 final "Syntactic combiners for binary predicates"
    ;; SRFI 157:
-   2018 final "Continuation marks"
+   2023 withdrawn "Continuation marks"
    ;; SRFI 158:
    2017 final "Generators and Accumulators"
    ;; SRFI 159:
@@ -444,7 +444,7 @@
    ;; SRFI 215:
    2021 final "Central Log Exchange"
    ;; SRFI 216:
-   2020 final "SICP Prerequisites (Portable)"
+   2021 final "SICP Prerequisites (Portable)"
    ;; SRFI 217:
    2021 final "Integer Sets"
    ;; SRFI 218:
@@ -498,9 +498,11 @@
    ;; SRFI 242:
    nil draft "The CFG Language"
    ;; SRFI 243:
-   nil draft "Unreadable Objects"
+   nil draft "Unreadable Data"
    ;; SRFI 244:
    2023 final "Multiple-value Definitions"
+   ;; SRFI 245:
+   nil draft "Mixing definitions and expressions within bodies"
    ]
   "Table of all known SRFI documents.")
 
@@ -512,7 +514,7 @@
      17)
     ("Binding"
      2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
-     219 227 244)
+     219 227 244 245)
     ("Comparison"
      67 85 114 128 162 228)
     ("Concurrency"
