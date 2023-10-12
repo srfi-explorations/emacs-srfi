@@ -503,6 +503,8 @@
    2023 final "Multiple-value Definitions"
    ;; SRFI 245:
    nil draft "Mixing definitions and expressions within bodies"
+   ;; SRFI 246:
+   nil draft "Guardians"
    ]
   "Table of all known SRFI documents.")
 
@@ -536,6 +538,8 @@
      12 34 35 36)
     ("Features"
      0 7 55 96)
+    ("Garbage Collection"
+     246)
     ("I/O"
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
      159 166 167 168 180 181 183 186 192 233)
