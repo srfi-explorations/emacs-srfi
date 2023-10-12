@@ -3,7 +3,7 @@
 
 (require 'cl-lib)
 
-;; TODO: Currently copy-pasted from <srfi-common/admin/srfis.scm>.
+;; TODO: Currently copy-pasted from <srfi-common/srfi-tools/data.scm>.
 (defconst srfi-data-convert--keyword-to-title
   '((algorithm "Algorithm")
     (assignment "Assignment")
@@ -16,6 +16,7 @@
     (error-handling "Error Handling")
     (exceptions "Exceptions")
     (features "Features")
+    (garbage-collection "Garbage Collection")
     (i/o "I/O")
     (internationalization "Internationalization")
     (introspection "Introspection")
