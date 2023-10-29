@@ -507,6 +507,8 @@
    nil draft "Guardians"
    ;; SRFI 247:
    nil draft "Syntactic Monads"
+   ;; SRFI 248:
+   nil draft "Minimal delimited continuations"
    ]
   "Table of all known SRFI documents.")
 
@@ -524,7 +526,7 @@
     ("Concurrency"
      18 21 230)
     ("Continuations"
-     157 226)
+     157 226 248)
     ("Control Flow"
      2 12 23 42 61 87 202 226 236 242)
     ("Data Structure"
