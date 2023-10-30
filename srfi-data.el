@@ -496,7 +496,7 @@
    ;; SRFI 241:
    2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
-   nil draft "The CFG Language"
+   2023 final "The CFG Language"
    ;; SRFI 243:
    nil draft "Unreadable Data"
    ;; SRFI 244:
