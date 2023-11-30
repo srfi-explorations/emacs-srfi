@@ -498,7 +498,7 @@
    ;; SRFI 242:
    2023 final "The CFG Language"
    ;; SRFI 243:
-   nil draft "Unreadable Data"
+   2023 withdrawn "Unreadable Data"
    ;; SRFI 244:
    2023 final "Multiple-value Definitions"
    ;; SRFI 245:
