@@ -506,7 +506,7 @@
    ;; SRFI 246:
    nil draft "Guardians"
    ;; SRFI 247:
-   nil draft "Syntactic Monads"
+   2023 final "Syntactic Monads"
    ;; SRFI 248:
    nil draft "Minimal delimited continuations"
    ;; SRFI 249:
@@ -526,7 +526,7 @@
      17)
     ("Binding"
      2 5 8 11 15 39 61 65 71 89 139 177 201 202 210 213
-     219 227 244 245)
+     219 227 244 245 251)
     ("Comparison"
      67 85 114 128 162 228)
     ("Concurrency"
@@ -541,7 +541,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229 231 237 240 250 251)
+     229 231 237 240 250)
     ("Error Handling"
      23 198 199 238)
     ("Exceptions"
