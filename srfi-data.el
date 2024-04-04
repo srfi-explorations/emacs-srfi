@@ -502,7 +502,7 @@
    ;; SRFI 244:
    2023 final "Multiple-value Definitions"
    ;; SRFI 245:
-   nil draft "Mixing definitions and expressions within bodies"
+   2024 withdrawn "Mixing definitions and expressions within bodies"
    ;; SRFI 246:
    nil draft "Guardians"
    ;; SRFI 247:
