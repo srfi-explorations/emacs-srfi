@@ -516,7 +516,7 @@
    ;; SRFI 251:
    nil draft "Mixing groups of definitions with expressions within bodies"
    ;; SRFI 252:
-   nil draft "Property Testing"
+   2024 final "Property Testing"
    ]
   "Table of all known SRFI documents.")
 
