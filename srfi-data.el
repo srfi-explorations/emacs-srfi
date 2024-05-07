@@ -514,7 +514,7 @@
    ;; SRFI 250:
    nil draft "Insertion-ordered hash tables"
    ;; SRFI 251:
-   nil draft "Mixing groups of definitions with expressions within bodies"
+   2024 final "Mixing groups of definitions with expressions within bodies"
    ;; SRFI 252:
    2024 final "Property Testing"
    ]
