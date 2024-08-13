@@ -517,6 +517,8 @@
    2024 final "Mixing groups of definitions with expressions within bodies"
    ;; SRFI 252:
    2024 final "Property Testing"
+   ;; SRFI 253:
+   nil draft "Data (Type-)Checking"
    ]
   "Table of all known SRFI documents.")
 
@@ -602,7 +604,7 @@
     ("Testing"
      64 78 252)
     ("Type Checking"
-     92 187)
+     92 187 253)
     )
   "Table of SRFI numbers by keyword.")
 
