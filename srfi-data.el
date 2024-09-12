@@ -504,7 +504,7 @@
    ;; SRFI 245:
    2024 withdrawn "Mixing definitions and expressions within bodies"
    ;; SRFI 246:
-   nil draft "Guardians"
+   2024 withdrawn "Guardians"
    ;; SRFI 247:
    2023 final "Syntactic Monads"
    ;; SRFI 248:
@@ -519,6 +519,8 @@
    2024 final "Property Testing"
    ;; SRFI 253:
    nil draft "Data (Type-)Checking"
+   ;; SRFI 254:
+   nil draft "Guardians"
    ]
   "Table of all known SRFI documents.")
 
@@ -553,7 +555,7 @@
     ("Features"
      0 7 55 96)
     ("Garbage Collection"
-     246)
+     246 254)
     ("I/O"
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
      159 166 167 168 180 181 183 186 192 233)
@@ -597,7 +599,7 @@
     ("SICP"
      203 216)
     ("Superseded"
-     40 114 121 122 142 159 186)
+     40 114 121 122 142 159 186 246)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 188 190 197 201 206 211
      212 213 219 232 236 239 241 247)
