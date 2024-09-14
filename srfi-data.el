@@ -520,7 +520,7 @@
    ;; SRFI 253:
    nil draft "Data (Type-)Checking"
    ;; SRFI 254:
-   nil draft "Guardians"
+   nil draft "Ephemerons and Guardians"
    ]
   "Table of all known SRFI documents.")
 
