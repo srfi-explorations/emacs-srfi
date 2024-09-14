@@ -510,7 +510,7 @@
    ;; SRFI 248:
    nil draft "Minimal delimited continuations"
    ;; SRFI 249:
-   nil draft "Restarting conditions"
+   2024 withdrawn "Restarting conditions"
    ;; SRFI 250:
    nil draft "Insertion-ordered hash tables"
    ;; SRFI 251:
@@ -521,6 +521,8 @@
    nil draft "Data (Type-)Checking"
    ;; SRFI 254:
    nil draft "Ephemerons and Guardians"
+   ;; SRFI 255:
+   nil draft "Restarting conditions"
    ]
   "Table of all known SRFI documents.")
 
@@ -551,7 +553,7 @@
     ("Error Handling"
      23 198 199 238)
     ("Exceptions"
-     12 34 35 36 249)
+     12 34 35 36 249 255)
     ("Features"
      0 7 55 96)
     ("Garbage Collection"
