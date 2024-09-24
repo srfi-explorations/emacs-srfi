@@ -480,7 +480,7 @@
    ;; SRFI 233:
    2022 final "INI files"
    ;; SRFI 234:
-   nil draft "Topological Sorting"
+   2024 final "Topological Sorting"
    ;; SRFI 235:
    2023 final "Combinators"
    ;; SRFI 236:
