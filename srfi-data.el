@@ -512,7 +512,7 @@
    ;; SRFI 249:
    2024 withdrawn "Restarting conditions"
    ;; SRFI 250:
-   nil draft "Insertion-ordered hash tables"
+   2024 withdrawn "Insertion-ordered hash tables"
    ;; SRFI 251:
    2024 final "Mixing groups of definitions with expressions within bodies"
    ;; SRFI 252:
