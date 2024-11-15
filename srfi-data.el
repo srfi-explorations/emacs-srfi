@@ -518,7 +518,7 @@
    ;; SRFI 252:
    2024 final "Property Testing"
    ;; SRFI 253:
-   nil draft "Data (Type-)Checking"
+   2024 final "Data (Type-)Checking"
    ;; SRFI 254:
    nil draft "Ephemerons and Guardians"
    ;; SRFI 255:
