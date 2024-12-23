@@ -512,7 +512,7 @@
    ;; SRFI 249:
    2024 withdrawn "Restarting conditions"
    ;; SRFI 250:
-   2024 withdrawn "Insertion-ordered hash tables"
+   nil draft "Insertion-ordered hash tables"
    ;; SRFI 251:
    2024 final "Mixing groups of definitions with expressions within bodies"
    ;; SRFI 252:
@@ -522,7 +522,7 @@
    ;; SRFI 254:
    nil draft "Ephemerons and Guardians"
    ;; SRFI 255:
-   nil draft "Restarting conditions"
+   2024 final "Restarting conditions"
    ;; SRFI 256:
    nil draft "Minimal extension to SRFI 9/R7RS small record type definitions for inheritance"
    ]
