@@ -525,6 +525,8 @@
    2024 final "Restarting conditions"
    ;; SRFI 256:
    nil draft "Minimal extension to SRFI 9/R7RS small record type definitions for inheritance"
+   ;; SRFI 257:
+   nil draft "Simple extendable pattern matcher with backtracking"
    ]
   "Table of all known SRFI documents.")
 
@@ -585,7 +587,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 204 241)
+     16 200 201 202 204 241 257)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
