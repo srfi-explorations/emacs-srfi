@@ -508,7 +508,7 @@
    ;; SRFI 247:
    2023 final "Syntactic Monads"
    ;; SRFI 248:
-   nil draft "Minimal delimited continuations"
+   2025 final "Minimal delimited continuations"
    ;; SRFI 249:
    2024 withdrawn "Restarting conditions"
    ;; SRFI 250:
