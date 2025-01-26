@@ -529,6 +529,8 @@
    nil draft "Simple extendable pattern matcher with backtracking"
    ;; SRFI 258:
    nil draft "Uninterned symbols"
+   ;; SRFI 259:
+   nil draft "Tagged procedures with type safety"
    ]
   "Table of all known SRFI documents.")
 
@@ -555,7 +557,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229 231 237 240 250 256 258)
+     229 231 237 240 250 256 258 259)
     ("Error Handling"
      23 198 199 238)
     ("Exceptions"
