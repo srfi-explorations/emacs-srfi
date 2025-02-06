@@ -1,4 +1,4 @@
-;; Copyright 2019, 2020 Lassi Kortela
+;; Copyright 2019, 2020 Lassi Kortela, 2025 Arthur A. Gleckler
 ;; SPDX-License-Identifier: MIT
 
 (require 'cl-lib)
@@ -29,6 +29,7 @@
     (optimization "Optimization")
     (parameters "Parameters")
     (pattern-matching "Pattern Matching")
+    (record-type "Record Type")
     (r6rs-process "R6RS process")
     (r7rs-large "R7RS Large")
     (r7rs-large-red "R7RS Large: Red Edition")
