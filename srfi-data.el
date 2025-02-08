@@ -524,7 +524,7 @@
    ;; SRFI 255:
    2024 final "Restarting conditions"
    ;; SRFI 256:
-   nil draft "Minimal extension to SRFI 9/R7RS small record type definitions for inheritance"
+   2025 withdrawn "Minimal extension to SRFI 9/R7RS small record type definitions for inheritance"
    ;; SRFI 257:
    nil draft "Simple extendable pattern matcher with backtracking"
    ;; SRFI 258:
@@ -607,7 +607,9 @@
      27 194)
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 169 207 220
-     243 258)
+     243)
+    ("Record Type"
+     9 20 57 76 99 100 131 136 137 150 184 237 240 253 256)
     ("SICP"
      203 216)
     ("Superseded"
