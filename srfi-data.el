@@ -528,7 +528,7 @@
    ;; SRFI 257:
    nil draft "Simple extendable pattern matcher with backtracking"
    ;; SRFI 258:
-   nil draft "Uninterned symbols"
+   2025 final "Uninterned symbols"
    ;; SRFI 259:
    nil draft "Tagged procedures with type safety"
    ;; SRFI 260:
