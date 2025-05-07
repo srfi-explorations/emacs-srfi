@@ -532,7 +532,7 @@
    ;; SRFI 259:
    2025 final "Tagged procedures with type safety"
    ;; SRFI 260:
-   nil draft "Generated Symbols"
+   2025 final "Generated Symbols"
    ]
   "Table of all known SRFI documents.")
 
