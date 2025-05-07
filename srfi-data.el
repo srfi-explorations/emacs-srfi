@@ -530,7 +530,7 @@
    ;; SRFI 258:
    2025 final "Uninterned symbols"
    ;; SRFI 259:
-   nil draft "Tagged procedures with type safety"
+   2025 final "Tagged procedures with type safety"
    ;; SRFI 260:
    nil draft "Generated Symbols"
    ]
