@@ -533,6 +533,8 @@
    2025 final "Tagged procedures with type safety"
    ;; SRFI 260:
    2025 final "Generated Symbols"
+   ;; SRFI 261:
+   nil draft "Portable SRFI Library Reference"
    ]
   "Table of all known SRFI documents.")
 
@@ -580,7 +582,7 @@
     ("Miscellaneous"
      20 31 92 120 123 154 165 172 173 187 223 235)
     ("Modules"
-     83 97)
+     83 97 261)
     ("Multiple-Value Returns"
      8 11 51 71 86 182 189 195 210 244)
     ("Numbers"
