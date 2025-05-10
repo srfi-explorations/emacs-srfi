@@ -535,6 +535,8 @@
    2025 final "Generated Symbols"
    ;; SRFI 261:
    nil draft "Portable SRFI Library Reference"
+   ;; SRFI 262:
+   nil draft "Extensible pattern matcher"
    ]
   "Table of all known SRFI documents.")
 
@@ -595,7 +597,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 204 241 257)
+     16 200 201 202 204 241 257 262)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
