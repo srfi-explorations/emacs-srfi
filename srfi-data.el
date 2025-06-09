@@ -537,6 +537,8 @@
    nil draft "Portable SRFI Library Reference"
    ;; SRFI 262:
    nil draft "Extensible pattern matcher"
+   ;; SRFI 263:
+   nil draft "Prototype Object System"
    ]
   "Table of all known SRFI documents.")
 
@@ -582,7 +584,7 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187 223 235)
+     20 31 92 120 123 154 165 172 173 187 223 235 263)
     ("Modules"
      83 97 261)
     ("Multiple-Value Returns"
