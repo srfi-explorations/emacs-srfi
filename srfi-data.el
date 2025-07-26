@@ -539,6 +539,8 @@
    nil draft "Extensible pattern matcher"
    ;; SRFI 263:
    nil draft "Prototype Object System"
+   ;; SRFI 264:
+   nil draft "String Syntax for Scheme Regular Expressions"
    ]
   "Table of all known SRFI documents.")
 
@@ -584,13 +586,15 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     20 31 92 120 123 154 165 172 173 187 223 235 263)
+     31 92 120 123 154 165 172 173 187 223 235)
     ("Modules"
      83 97 261)
     ("Multiple-Value Returns"
      8 11 51 71 86 182 189 195 210 244)
     ("Numbers"
      4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231)
+    ("Object-Oriented Programming"
+     20 263)
     ("Operating System"
      6 22 37 50 98 103 104 112 138 170 176 193 198 199 205 215
      238)
@@ -599,7 +603,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 204 241 257 262)
+     16 200 201 202 204 241 257 262 264)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
