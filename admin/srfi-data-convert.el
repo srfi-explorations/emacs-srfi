@@ -41,6 +41,7 @@
     (superseded "Superseded")
     (syntax "Syntax")
     (testing "Testing")
+    (text "Text")
     (type-checking "Type Checking")))
 
 (defun srfi-data-convert--read-all ()
