@@ -540,7 +540,7 @@
    ;; SRFI 263:
    nil draft "Prototype Object System"
    ;; SRFI 264:
-   nil draft "String Syntax for Scheme Regular Expressions"
+   2025 final "String Syntax for Scheme Regular Expressions"
    ]
   "Table of all known SRFI documents.")
 
@@ -567,7 +567,7 @@
      115 116 117 118 121 122 124 125 126 127 130 131 133 134 135 136
      137 140 142 146 150 151 152 153 155 158 160 161 164 171 174 175
      178 179 182 184 185 189 195 196 208 209 214 217 221 222 224 225
-     229 231 237 240 250 256 258 259 260)
+     229 231 237 240 250 256 258 259 260 264)
     ("Error Handling"
      23 198 199 238)
     ("Exceptions"
@@ -603,7 +603,7 @@
     ("Parameters"
      39 139)
     ("Pattern Matching"
-     16 200 201 202 204 241 257 262 264)
+     16 200 201 202 204 241 257 262)
     ("R6RS process"
      75 76 77 83 93)
     ("R7RS Large"
@@ -629,6 +629,9 @@
      212 213 219 232 236 239 241 247)
     ("Testing"
      64 78 252)
+    ("Text"
+     13 14 28 48 75 109 115 118 129 130 135 140 152 159 166 185
+     264)
     ("Type Checking"
      92 187 253)
     )
