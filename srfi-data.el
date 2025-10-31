@@ -541,6 +541,8 @@
    nil draft "Prototype Object System"
    ;; SRFI 264:
    2025 final "String Syntax for Scheme Regular Expressions"
+   ;; SRFI 265:
+   nil draft "The CFG Language"
    ]
   "Table of all known SRFI documents.")
 
@@ -560,7 +562,7 @@
     ("Continuations"
      157 226 248)
     ("Control Flow"
-     2 12 23 42 61 87 202 226 236 242)
+     2 12 23 42 61 87 202 226 236 242 265)
     ("Data Structure"
      1 3 4 9 13 14 19 25 33 40 41 43 44 45 47 52
      57 60 63 66 69 70 74 76 84 86 90 99 100 101 111 113
