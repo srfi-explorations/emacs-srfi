@@ -534,7 +534,7 @@
    ;; SRFI 260:
    2025 final "Generated Symbols"
    ;; SRFI 261:
-   nil draft "Portable SRFI Library Reference"
+   2025 final "Portable SRFI Library Reference"
    ;; SRFI 262:
    nil draft "Extensible pattern matcher"
    ;; SRFI 263:
