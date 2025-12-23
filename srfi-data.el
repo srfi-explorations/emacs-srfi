@@ -526,7 +526,7 @@
    ;; SRFI 256:
    2025 withdrawn "Minimal extension to SRFI 9/R7RS small record type definitions for inheritance"
    ;; SRFI 257:
-   nil draft "Simple extendable pattern matcher with backtracking"
+   2025 final "Simple extendable pattern matcher with backtracking"
    ;; SRFI 258:
    2025 final "Uninterned symbols"
    ;; SRFI 259:
