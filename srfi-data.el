@@ -547,6 +547,8 @@
    nil draft "The expr syntax"
    ;; SRFI 267:
    nil draft "Raw String Syntax"
+   ;; SRFI 268:
+   nil draft "Multidimensional Array Literals"
    ]
   "Table of all known SRFI documents.")
 
@@ -623,7 +625,7 @@
      27 194)
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 169 207 220
-     243)
+     243 267 268)
     ("Record Type"
      9 20 57 76 99 100 131 136 137 150 184 237 240 253 256)
     ("SICP"
@@ -632,7 +634,7 @@
      40 114 121 122 142 159 186 246)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 188 190 197 201 206 211
-     212 213 219 232 236 239 241 247 266 267)
+     212 213 219 232 236 239 241 247 266)
     ("Testing"
      64 78 252)
     ("Text"
