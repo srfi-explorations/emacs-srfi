@@ -549,6 +549,8 @@
    nil draft "Raw String Syntax"
    ;; SRFI 268:
    nil draft "Multidimensional Array Literals"
+   ;; SRFI 269:
+   nil draft "Portable Test Definitions"
    ]
   "Table of all known SRFI documents.")
 
@@ -636,7 +638,7 @@
      24 26 46 53 72 93 147 148 149 156 188 190 197 201 206 211
      212 213 219 232 236 239 241 247 266)
     ("Testing"
-     64 78 252)
+     64 78 252 269)
     ("Text"
      13 14 28 48 75 109 115 118 129 130 135 140 152 159 166 185
      264)
