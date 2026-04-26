@@ -546,7 +546,7 @@
    ;; SRFI 266:
    nil draft "The expr syntax"
    ;; SRFI 267:
-   nil draft "Raw String Syntax"
+   2026 final "Raw String Syntax"
    ;; SRFI 268:
    nil draft "Multidimensional Array Literals"
    ;; SRFI 269:
