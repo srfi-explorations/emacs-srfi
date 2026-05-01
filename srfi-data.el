@@ -551,6 +551,8 @@
    nil draft "Multidimensional Array Literals"
    ;; SRFI 269:
    nil draft "Portable Test Definitions"
+   ;; SRFI 270:
+   nil draft "Hexadecimal Floating-Point Constants"
    ]
   "Table of all known SRFI documents.")
 
@@ -627,7 +629,7 @@
      27 194)
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 169 207 220
-     243 267 268)
+     243 267 268 270)
     ("Record Type"
      9 20 57 76 99 100 131 136 137 150 184 237 240 253 256)
     ("SICP"
