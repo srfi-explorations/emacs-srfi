@@ -553,6 +553,8 @@
    nil draft "Portable Test Definitions"
    ;; SRFI 270:
    nil draft "Hexadecimal Floating-Point Constants"
+   ;; SRFI 271:
+   nil draft "Random port libraries"
    ]
   "Table of all known SRFI documents.")
 
@@ -626,7 +628,7 @@
     ("R7RS Large: Tangerine Edition"
      115 141 143 144 146 151 158 159 160)
     ("Randomness"
-     27 194)
+     27 194 271)
     ("Reader Syntax"
      10 30 49 58 62 88 105 107 108 109 110 119 163 169 207 220
      243 267 268 270)
