@@ -555,6 +555,8 @@
    nil draft "Hexadecimal Floating-Point Constants"
    ;; SRFI 271:
    nil draft "Random port libraries"
+   ;; SRFI 272:
+   nil draft "Pretty Printing"
    ]
   "Table of all known SRFI documents.")
 
@@ -592,7 +594,7 @@
      246 254)
     ("I/O"
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
-     159 166 167 168 180 181 183 186 192 233)
+     159 166 167 168 180 181 183 186 192 233 272)
     ("Internationalization"
      75 129 218)
     ("Introspection"
