@@ -557,6 +557,8 @@
    nil draft "Random port libraries"
    ;; SRFI 272:
    nil draft "Pretty Printing"
+   ;; SRFI 273:
+   nil draft "Extensions to Data (Type-)Checking"
    ]
   "Table of all known SRFI documents.")
 
@@ -649,7 +651,7 @@
      13 14 28 48 75 109 115 118 129 130 135 140 152 159 166 185
      264)
     ("Type Checking"
-     92 187 253)
+     92 187 253 273)
     )
   "Table of SRFI numbers by keyword.")
 
