@@ -538,7 +538,7 @@
    ;; SRFI 262:
    nil draft "Extensible pattern matcher"
    ;; SRFI 263:
-   nil draft "Prototype Object System"
+   2026 final "Prototype Object System"
    ;; SRFI 264:
    2025 final "String Syntax for Scheme Regular Expressions"
    ;; SRFI 265:
