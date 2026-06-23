@@ -563,6 +563,8 @@
    nil draft "Extended List Conversion Procedures"
    ;; SRFI 275:
    nil draft "URIs and IRIs"
+   ;; SRFI 276:
+   nil draft "Type-specific Flonum Libraries"
    ]
   "Table of all known SRFI documents.")
 
@@ -614,7 +616,8 @@
     ("Multiple-Value Returns"
      8 11 51 71 86 182 189 195 210 244)
     ("Numbers"
-     4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231)
+     4 60 63 70 73 77 94 122 141 143 144 151 169 179 208 231
+     276)
     ("Object-Oriented Programming"
      20 263)
     ("Operating System"
