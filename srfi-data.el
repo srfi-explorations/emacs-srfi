@@ -260,7 +260,7 @@
    ;; SRFI 123:
    2015 final "Generic accessor and modifier operators"
    ;; SRFI 124:
-   2015 final "Ephemerons"
+   2026 withdrawn "Ephemerons"
    ;; SRFI 125:
    2016 final "Intermediate hash tables"
    ;; SRFI 126:
@@ -520,7 +520,7 @@
    ;; SRFI 253:
    2024 final "Data (Type-)Checking"
    ;; SRFI 254:
-   nil draft "Ephemerons and Guardians"
+   2026 final "Ephemerons and Guardians"
    ;; SRFI 255:
    2024 final "Restarting conditions"
    ;; SRFI 256:
