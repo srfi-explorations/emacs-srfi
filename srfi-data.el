@@ -565,6 +565,8 @@
    nil draft "URIs and IRIs"
    ;; SRFI 276:
    nil draft "Type-specific Flonum Libraries"
+   ;; SRFI 277:
+   nil draft "Cyclic ports"
    ]
   "Table of all known SRFI documents.")
 
@@ -602,7 +604,7 @@
      246 254)
     ("I/O"
      6 28 29 36 38 48 54 56 59 68 79 80 81 82 91 106
-     159 166 167 168 180 181 183 186 192 233 272)
+     159 166 167 168 180 181 183 186 192 233 272 277)
     ("Internationalization"
      75 129 218)
     ("Introspection"
@@ -648,7 +650,7 @@
     ("SICP"
      203 216)
     ("Superseded"
-     40 114 121 122 142 159 186 246)
+     40 114 121 122 124 142 159 186 246)
     ("Syntax"
      24 26 46 53 72 93 147 148 149 156 188 190 197 201 206 211
      212 213 219 232 236 239 241 247 266)
