@@ -552,7 +552,7 @@
    ;; SRFI 269:
    nil draft "Portable Test Definitions"
    ;; SRFI 270:
-   nil draft "Hexadecimal Floating-Point Constants"
+   2026 final "Hexadecimal Floating-Point Constants"
    ;; SRFI 271:
    2026 final "Random port libraries"
    ;; SRFI 272:
