@@ -554,7 +554,7 @@
    ;; SRFI 270:
    nil draft "Hexadecimal Floating-Point Constants"
    ;; SRFI 271:
-   nil draft "Random port libraries"
+   2026 final "Random port libraries"
    ;; SRFI 272:
    nil draft "Pretty Printing"
    ;; SRFI 273:
