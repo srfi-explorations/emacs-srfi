@@ -575,6 +575,8 @@
    nil draft "Monads"
    ;; SRFI 281:
    nil draft "Bytevector Utilities"
+   ;; SRFI 282:
+   nil draft "Missing R7RS (Type) Predicates"
    ]
   "Table of all known SRFI documents.")
 
@@ -620,7 +622,7 @@
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
-     31 92 120 123 154 165 172 173 187 223 235 280)
+     31 92 120 123 154 165 172 173 187 223 235 280 282)
     ("Modules"
      83 97 261)
     ("Multiple-Value Returns"
