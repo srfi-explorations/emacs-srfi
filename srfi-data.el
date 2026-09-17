@@ -577,6 +577,8 @@
    nil draft "Bytevector Utilities"
    ;; SRFI 282:
    nil draft "Missing R7RS (Type) Predicates"
+   ;; SRFI 283:
+   nil draft "(Type-)Check Introspection"
    ]
   "Table of all known SRFI documents.")
 
@@ -618,7 +620,7 @@
     ("Internationalization"
      75 129 218)
     ("Introspection"
-     102 191 238 279)
+     102 191 238 279 283)
     ("Lazy Evaluation"
      65 155)
     ("Miscellaneous"
