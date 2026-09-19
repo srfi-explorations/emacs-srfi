@@ -579,6 +579,8 @@
    nil draft "Missing R7RS (Type) Predicates"
    ;; SRFI 283:
    nil draft "(Type-)Check Introspection"
+   ;; SRFI 284:
+   nil draft "define-typed"
    ]
   "Table of all known SRFI documents.")
 
@@ -672,7 +674,7 @@
      13 14 28 48 75 109 115 118 129 130 135 140 152 159 166 185
      264)
     ("Type Checking"
-     92 187 253 273)
+     92 187 253 273 284)
     )
   "Table of SRFI numbers by keyword.")
 
