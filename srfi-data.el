@@ -550,7 +550,7 @@
    ;; SRFI 268:
    nil draft "Multidimensional Array Literals"
    ;; SRFI 269:
-   nil draft "Portable Test Definitions"
+   2026 final "Portable Test Definitions"
    ;; SRFI 270:
    2026 final "Hexadecimal Floating-Point Constants"
    ;; SRFI 271:
@@ -576,7 +576,7 @@
    ;; SRFI 281:
    nil draft "Bytevector Utilities"
    ;; SRFI 282:
-   nil draft "Missing R7RS (Type) Predicates"
+   nil draft "Additional R7RS (Type) Predicates"
    ;; SRFI 283:
    nil draft "(Type-)Check Introspection"
    ;; SRFI 284:
