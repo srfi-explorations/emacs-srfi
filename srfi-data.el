@@ -583,6 +583,8 @@
    nil draft "define-typed"
    ;; SRFI 285:
    nil draft "Dates and Times"
+   ;; SRFI 286:
+   nil draft "Controlling Library Availability"
    ]
   "Table of all known SRFI documents.")
 
@@ -630,7 +632,7 @@
     ("Miscellaneous"
      31 92 120 123 154 165 172 173 187 223 235 280 282)
     ("Modules"
-     83 97 261)
+     83 97 261 286)
     ("Multiple-Value Returns"
      8 11 51 71 86 182 189 195 210 244)
     ("Numbers"
