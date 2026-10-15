@@ -496,7 +496,7 @@
    ;; SRFI 241:
    2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
-   2026 withdrawn "The CFG Language"
+   2023 final "The CFG Language"
    ;; SRFI 243:
    2023 withdrawn "Unreadable Data"
    ;; SRFI 244:
