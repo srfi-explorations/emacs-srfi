@@ -496,7 +496,7 @@
    ;; SRFI 241:
    2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
-   2023 final "The CFG Language"
+   2026 withdrawn "The CFG Language"
    ;; SRFI 243:
    2023 withdrawn "Unreadable Data"
    ;; SRFI 244:
@@ -562,7 +562,7 @@
    ;; SRFI 274:
    2026 final "Extended List Conversion Procedures"
    ;; SRFI 275:
-   nil draft "URIs, IRIs, and basic paths"
+   2026 final "URIs, IRIs, and basic paths"
    ;; SRFI 276:
    nil draft "Type-specific Flonum Libraries"
    ;; SRFI 277:
