@@ -568,7 +568,7 @@
    ;; SRFI 277:
    2026 final "Cyclic ports"
    ;; SRFI 278:
-   nil draft "Supplemental Numerics"
+   2026 final "Supplemental Numerics"
    ;; SRFI 279:
    nil draft "In(tro)spection Protocol"
    ;; SRFI 280:
