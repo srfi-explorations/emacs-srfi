@@ -587,6 +587,8 @@
    nil draft "Controlling Library Availability"
    ;; SRFI 287:
    nil draft "Graphs"
+   ;; SRFI 288:
+   nil draft "Compound Conditions"
    ]
   "Table of all known SRFI documents.")
 
@@ -617,7 +619,7 @@
     ("Error Handling"
      23 198 199 238)
     ("Exceptions"
-     12 34 35 36 249 255)
+     12 34 35 36 249 255 288)
     ("Features"
      0 7 55 96)
     ("Garbage Collection"
