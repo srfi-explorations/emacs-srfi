@@ -496,7 +496,7 @@
    ;; SRFI 241:
    2023 final "Match — Simple Pattern-Matching Syntax to Express Catamorphisms on Scheme Data"
    ;; SRFI 242:
-   2023 final "The CFG Language"
+   2026 withdrawn "The CFG Language"
    ;; SRFI 243:
    2023 withdrawn "Unreadable Data"
    ;; SRFI 244:
@@ -542,7 +542,7 @@
    ;; SRFI 264:
    2025 final "String Syntax for Scheme Regular Expressions"
    ;; SRFI 265:
-   nil draft "The CFG Language"
+   2026 final "The CFG Language"
    ;; SRFI 266:
    nil draft "The expr syntax"
    ;; SRFI 267:
