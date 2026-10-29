@@ -570,7 +570,7 @@
    ;; SRFI 278:
    2026 final "Supplemental Numerics"
    ;; SRFI 279:
-   nil draft "In(tro)spection Protocol"
+   2026 final "In(tro)spection Protocol"
    ;; SRFI 280:
    nil draft "Monads"
    ;; SRFI 281:
