@@ -556,7 +556,7 @@
    ;; SRFI 271:
    2026 final "Random port libraries"
    ;; SRFI 272:
-   nil draft "Pretty Printing"
+   2026 final "Pretty Printing"
    ;; SRFI 273:
    2026 final "Extensions to Data (Type-)Checking"
    ;; SRFI 274:
